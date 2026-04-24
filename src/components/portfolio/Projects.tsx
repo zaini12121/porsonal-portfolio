@@ -1,7 +1,18 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Code2 } from "lucide-react";
+import portfolioPreview from "@/assets/portfolio-preview.webp";
 
-const projects = [
+type Project = {
+  title: string;
+  desc: string;
+  tags: string[];
+  status: string;
+  gradient: string;
+  href: string;
+  image?: string;
+};
+
+const projects: Project[] = [
   {
     title: "Student Portal",
     desc: "Dual-role login (Admin & Student) with separate dashboards, attendance system, monthly fee tracker (paid/unpaid) and application submissions. Powered by a cloud PostgreSQL database on Neon.",
