@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Sparkles, Download, Eye } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import zainHero from "@/assets/zain-hero.png";
 
 export const Hero = () => {
   return (
@@ -18,9 +17,9 @@ export const Hero = () => {
       <div className="absolute inset-0 grid-bg opacity-40" />
 
       <div className="container relative z-10">
-        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
-          {/* Left: text */}
-          <div>
+        <div className="max-w-4xl mx-auto text-center">
+          {/* text */}
+          <div className="flex flex-col items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -35,7 +34,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl font-bold leading-[0.95]"
+              className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl font-bold leading-[0.95] text-center"
             >
               Muhammad <br />
               <span className="text-gradient animate-gradient">Zain-ul-Abdin</span>
@@ -45,7 +44,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed"
+              className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed text-center"
             >
               AI & Data Science student at{" "}
               <span className="text-foreground font-medium">SMIT</span> · Python Developer ·
@@ -67,7 +66,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="mt-10 flex flex-wrap gap-4"
+              className="mt-10 flex flex-wrap gap-4 justify-center"
             >
               <a
                 href="#projects"
@@ -105,7 +104,7 @@ export const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="mt-12 grid grid-cols-3 max-w-md gap-6 border-t border-border/50 pt-8"
+              className="mt-12 grid grid-cols-3 max-w-md mx-auto gap-6 border-t border-border/50 pt-8"
             >
               {[
                 { n: "3+", l: "Real projects" },
@@ -121,49 +120,6 @@ export const Hero = () => {
               ))}
             </motion.div>
           </div>
-
-          {/* Right: portrait */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative mx-auto w-full max-w-md"
-          >
-            <div className="absolute inset-0 -m-6 rounded-[3rem] bg-gradient-primary blur-3xl opacity-30 animate-pulse-glow" />
-            <div className="relative">
-              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-primary/20 via-transparent to-secondary/20" />
-              <img
-                src={zainHero}
-                alt="Muhammad Zain-ul-Abdin"
-                width={600}
-                height={800}
-                className="relative w-full h-auto object-contain drop-shadow-2xl"
-                style={{ filter: "drop-shadow(0 20px 40px hsl(var(--primary) / 0.25))" }}
-              />
-            </div>
-            {/* floating badges */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="absolute top-6 -left-4 glass rounded-2xl px-4 py-2.5 text-xs font-mono"
-            >
-              <div className="text-primary">● Python</div>
-            </motion.div>
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-              className="absolute bottom-20 -right-2 glass rounded-2xl px-4 py-2.5 text-xs font-mono"
-            >
-              <div className="text-primary">{"{ } Full Stack"}</div>
-            </motion.div>
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, delay: 2 }}
-              className="absolute top-1/2 -right-6 glass rounded-2xl px-4 py-2.5 text-xs font-mono"
-            >
-              <div className="text-primary">AI / ML</div>
-            </motion.div>
-          </motion.div>
         </div>
       </div>
 
