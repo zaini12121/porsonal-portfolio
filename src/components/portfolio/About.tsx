@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import zainAbout from "@/assets/zain-about.png";
+import zainAbout from "@/assets/zain-hero.png";
 import { Brain, Code2, Database } from "lucide-react";
 
 export const About = () => {
