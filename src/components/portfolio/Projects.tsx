@@ -3,28 +3,28 @@ import { ArrowUpRight, Code2 } from "lucide-react";
 
 const projects = [
   {
-    title: "NeuraChat — AI Assistant",
-    desc: "Full-stack chat app with LLM streaming responses, conversation memory and markdown rendering.",
-    tags: ["React", "FastAPI", "OpenAI", "PostgreSQL"],
+    title: "Student Portal",
+    desc: "Dual-role login (Admin & Student) with separate dashboards, attendance system, monthly fee tracker (paid/unpaid) and application submissions. Powered by a cloud PostgreSQL database on Neon.",
+    tags: ["Python", "HTML/CSS/JS", "SQL", "Neon DB"],
+    status: "Complete",
     gradient: "from-primary/30 to-secondary/30",
+    href: "https://github.com/zaini12121",
   },
   {
-    title: "DataPulse — Analytics Dashboard",
-    desc: "Real-time analytics dashboard consuming a FastAPI backend with SQLAlchemy + Alembic migrations.",
-    tags: ["TypeScript", "React", "FastAPI", "Neon"],
+    title: "QR Menu System",
+    desc: "Customers scan a QR code to open a digital restaurant menu, place online orders and book tables — all backed by a SQL database.",
+    tags: ["Python", "HTML/CSS/JS", "SQL"],
+    status: "Complete",
     gradient: "from-secondary/30 to-accent/30",
+    href: "https://github.com/zaini12121",
   },
   {
-    title: "SpamSense — ML Classifier",
-    desc: "Trained a text classifier with scikit-learn, served via FastAPI endpoint, demoed in a React UI.",
-    tags: ["Python", "scikit-learn", "Pandas", "FastAPI"],
+    title: "Personal Portfolio",
+    desc: "Responsive dark-theme portfolio with scroll animations, built with vanilla HTML5, CSS3 and JavaScript. Live on GitHub Pages.",
+    tags: ["HTML5", "CSS3", "JavaScript"],
+    status: "Complete",
     gradient: "from-accent/30 to-primary/30",
-  },
-  {
-    title: "SMIT Study Hub",
-    desc: "Student resource portal with auth, role-based access, and a content management layer.",
-    tags: ["React", "Tailwind", "PostgreSQL", "JWT"],
-    gradient: "from-primary/30 to-accent/30",
+    href: "https://zaini12121.github.io/Portfolio",
   },
 ];
 
