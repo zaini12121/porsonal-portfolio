@@ -73,7 +73,7 @@ export const Projects = () => {
                   <h3 className="font-display text-2xl font-semibold">{p.title}</h3>
                   <div className="flex gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
                     <button className="rounded-full glass p-2 hover:text-primary transition-colors" aria-label="GitHub">
-                      <Github className="h-4 w-4" />
+                      <Code2 className="h-4 w-4" />
                     </button>
                     <button className="rounded-full bg-gradient-primary p-2 text-primary-foreground" aria-label="Open">
                       <ArrowUpRight className="h-4 w-4" />
