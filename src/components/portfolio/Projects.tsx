@@ -65,6 +65,9 @@ export const Projects = () => {
                     0{i + 1} / 0{projects.length}
                   </div>
                 </div>
+                <div className="absolute top-4 left-4 glass rounded-full px-3 py-1 text-[10px] font-mono text-primary">
+                  ✓ {p.status}
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
               </div>
 
@@ -72,12 +75,24 @@ export const Projects = () => {
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="font-display text-2xl font-semibold">{p.title}</h3>
                   <div className="flex gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <button className="rounded-full glass p-2 hover:text-primary transition-colors" aria-label="GitHub">
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-full glass p-2 hover:text-primary transition-colors"
+                      aria-label="View source"
+                    >
                       <Code2 className="h-4 w-4" />
-                    </button>
-                    <button className="rounded-full bg-gradient-primary p-2 text-primary-foreground" aria-label="Open">
+                    </a>
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-full bg-gradient-primary p-2 text-primary-foreground"
+                      aria-label="Open"
+                    >
                       <ArrowUpRight className="h-4 w-4" />
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
