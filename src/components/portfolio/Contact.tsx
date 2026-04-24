@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Send } from "lucide-react";
+import { Mail, Send, Facebook, Instagram } from "lucide-react";
 import { toast } from "sonner";
 
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -18,6 +18,8 @@ const socials = [
   { icon: GithubIcon, label: "GitHub", href: "https://github.com/zaini12121" },
   { icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/zain-ul-abdin-281985378" },
   { icon: Mail, label: "Email", href: "mailto:zzawar521@gmail.com" },
+  { icon: Facebook, label: "Facebook", href: "https://facebook.com" },
+  { icon: Instagram, label: "Instagram", href: "https://instagram.com" },
 ];
 
 export const Contact = () => {
@@ -97,13 +99,15 @@ export const Contact = () => {
                 placeholder="Tell me about your project..."
                 className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors resize-none"
               />
-              <button
-                type="submit"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 font-medium text-primary-foreground shadow-glow transition-transform hover:scale-105"
-              >
-                Send message
-                <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </button>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 font-medium text-primary-foreground shadow-glow transition-transform hover:scale-105"
+                >
+                  Send message
+                  <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </button>
+              </div>
             </form>
           </div>
         </motion.div>
