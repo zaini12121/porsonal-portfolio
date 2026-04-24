@@ -1,0 +1,104 @@
+import { motion } from "framer-motion";
+import { ArrowRight, Download, Sparkles } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
+
+export const Hero = () => {
+  return (
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-24">
+      <img
+        src={heroBg}
+        alt=""
+        aria-hidden="true"
+        width={1920}
+        height={1080}
+        className="absolute inset-0 h-full w-full object-cover opacity-40"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+      <div className="absolute inset-0 grid-bg opacity-40" />
+
+      <div className="container relative z-10">
+        <div className="max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs text-muted-foreground"
+          >
+            <Sparkles className="h-3.5 w-3.5 text-primary" />
+            Available for internships & freelance
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95]"
+          >
+            Muhammad <br />
+            <span className="text-gradient animate-gradient">Zain-ul-Abdin</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="mt-6 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed"
+          >
+            Web Developer & AI / Data Science student at{" "}
+            <span className="text-foreground font-medium">SMIT</span>. I craft intelligent,
+            data-driven web experiences with React, FastAPI and Machine Learning.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="mt-10 flex flex-wrap gap-4"
+          >
+            <a
+              href="#projects"
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 font-medium text-primary-foreground shadow-glow transition-transform hover:scale-105"
+            >
+              View Projects
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full glass px-7 py-3.5 font-medium text-foreground transition-colors hover:border-primary/60"
+            >
+              <Download className="h-4 w-4" />
+              Get in touch
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="mt-16 grid grid-cols-3 max-w-md gap-6 border-t border-border/50 pt-8"
+          >
+            {[
+              { n: "15+", l: "Projects" },
+              { n: "2+", l: "Years coding" },
+              { n: "AI", l: "& Data Sci" },
+            ].map((s) => (
+              <div key={s.l}>
+                <div className="font-display text-2xl md:text-3xl font-bold text-gradient">
+                  {s.n}
+                </div>
+                <div className="text-xs text-muted-foreground mt-1">{s.l}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* floating orbs */}
+      <div className="pointer-events-none absolute top-1/4 right-10 h-72 w-72 rounded-full bg-primary/20 blur-3xl animate-float" />
+      <div
+        className="pointer-events-none absolute bottom-10 right-1/4 h-64 w-64 rounded-full bg-secondary/20 blur-3xl animate-float"
+        style={{ animationDelay: "2s" }}
+      />
+    </section>
+  );
+};
