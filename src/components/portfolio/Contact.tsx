@@ -14,10 +14,26 @@ const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+  </svg>
+);
+
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
+  </svg>
+);
+
 const socials = [
   { icon: GithubIcon, label: "GitHub", href: "https://github.com/zaini12121" },
   { icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/zain-ul-abdin-281985378" },
   { icon: Mail, label: "Email", href: "mailto:zzawar521@gmail.com" },
+  { icon: FacebookIcon, label: "Facebook", href: "https://facebook.com" },
+  { icon: InstagramIcon, label: "Instagram", href: "https://instagram.com" },
 ];
 
 export const Contact = () => {
@@ -97,13 +113,15 @@ export const Contact = () => {
                 placeholder="Tell me about your project..."
                 className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors resize-none"
               />
-              <button
-                type="submit"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 font-medium text-primary-foreground shadow-glow transition-transform hover:scale-105"
-              >
-                Send message
-                <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </button>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 font-medium text-primary-foreground shadow-glow transition-transform hover:scale-105"
+                >
+                  Send message
+                  <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </button>
+              </div>
             </form>
           </div>
         </motion.div>
