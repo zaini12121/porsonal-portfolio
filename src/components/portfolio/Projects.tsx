@@ -24,7 +24,7 @@ const projects = [
     tags: ["HTML5", "CSS3", "JavaScript"],
     status: "Complete",
     gradient: "from-accent/30 to-primary/30",
-    href: "https://zaini12121.github.io/Portfolio",
+    href: "https://mzainulabdin.lovable.app",
   },
 ];
 
