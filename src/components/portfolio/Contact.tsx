@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github as GithubIcon, Linkedin as LinkedinIcon, Mail, Send } from "lucide-react";
 import { toast } from "sonner";
 
 const socials = [
