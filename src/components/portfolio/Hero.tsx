@@ -120,6 +120,7 @@ export const Hero = () => {
               ))}
             </motion.div>
           </div>
+        </div>
       </div>
 
       {/* floating orbs */}
