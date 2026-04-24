@@ -2,24 +2,24 @@ import { motion } from "framer-motion";
 
 const groups = [
   {
+    title: "Languages",
+    tag: "core",
+    items: ["Python", "JavaScript", "SQL"],
+  },
+  {
     title: "Frontend",
     tag: "ui / ux",
-    items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Tailwind CSS"],
+    items: ["HTML5", "CSS3", "Responsive Design", "Scroll animations"],
   },
   {
-    title: "Backend",
-    tag: "python / apis",
-    items: ["Python", "FastAPI", "SQLAlchemy", "Alembic", "REST APIs", "Auth / JWT"],
-  },
-  {
-    title: "Database",
+    title: "Backend & DB",
     tag: "data layer",
-    items: ["PostgreSQL", "Neon", "SQL", "Migrations", "Schema design"],
+    items: ["Python", "Neon DB", "PostgreSQL", "Cloud hosting"],
   },
   {
-    title: "AI & Data Science",
-    tag: "intelligence",
-    items: ["NumPy", "Pandas", "scikit-learn", "LLMs", "Data viz", "ML basics"],
+    title: "Tools & AI",
+    tag: "workflow",
+    items: ["Git · GitHub", "Cursor IDE", "GitHub Pages", "Modern AI (Cisco)"],
   },
 ];
 

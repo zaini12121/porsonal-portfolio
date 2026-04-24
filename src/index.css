@@ -8,64 +8,64 @@
 @layer base {
   :root {
     /* Deep space canvas */
-    --background: 230 35% 5%;
-    --foreground: 210 40% 98%;
+    --background: 150 20% 5%;
+    --foreground: 80 30% 96%;
 
-    --card: 230 30% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 150 20% 8%;
+    --card-foreground: 80 30% 96%;
 
-    --popover: 230 30% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 150 20% 8%;
+    --popover-foreground: 80 30% 96%;
 
-    /* Neon cyan primary */
-    --primary: 186 100% 55%;
-    --primary-foreground: 230 35% 5%;
-    --primary-glow: 186 100% 70%;
+    /* Neon lime (from logo) */
+    --primary: 80 90% 70%;
+    --primary-foreground: 150 30% 5%;
+    --primary-glow: 80 100% 75%;
 
-    /* Violet secondary */
-    --secondary: 270 85% 65%;
-    --secondary-foreground: 210 40% 98%;
+    /* Deep green secondary */
+    --secondary: 140 60% 40%;
+    --secondary-foreground: 80 30% 96%;
 
-    --muted: 230 25% 12%;
-    --muted-foreground: 215 20% 70%;
+    --muted: 150 15% 12%;
+    --muted-foreground: 80 10% 68%;
 
-    --accent: 290 90% 65%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 95 80% 60%;
+    --accent-foreground: 150 30% 5%;
 
     --destructive: 0 85% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 80 30% 96%;
 
-    --border: 230 30% 18%;
-    --input: 230 30% 14%;
-    --ring: 186 100% 55%;
+    --border: 150 20% 18%;
+    --input: 150 20% 12%;
+    --ring: 80 90% 70%;
 
     --radius: 1rem;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(186 100% 55%), hsl(270 85% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(230 35% 5%) 0%, hsl(240 40% 10%) 50%, hsl(270 40% 12%) 100%);
-    --gradient-radial: radial-gradient(circle at 50% 50%, hsl(186 100% 55% / 0.15), transparent 70%);
-    --gradient-text: linear-gradient(135deg, hsl(186 100% 70%), hsl(270 90% 75%), hsl(290 90% 75%));
-    --gradient-card: linear-gradient(145deg, hsl(230 30% 10% / 0.9), hsl(230 30% 6% / 0.9));
+    --gradient-primary: linear-gradient(135deg, hsl(80 90% 70%), hsl(95 80% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(150 25% 6%) 0%, hsl(145 30% 8%) 50%, hsl(140 40% 10%) 100%);
+    --gradient-radial: radial-gradient(circle at 50% 50%, hsl(80 90% 70% / 0.18), transparent 70%);
+    --gradient-text: linear-gradient(135deg, hsl(80 100% 80%), hsl(95 90% 65%), hsl(140 80% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(150 20% 10% / 0.9), hsl(150 25% 6% / 0.9));
 
     /* Shadows / glows */
-    --shadow-glow: 0 0 40px hsl(186 100% 55% / 0.35);
-    --shadow-glow-violet: 0 0 60px hsl(270 85% 65% / 0.4);
-    --shadow-elegant: 0 20px 60px -20px hsl(186 100% 55% / 0.25);
-    --shadow-card: 0 10px 40px -10px hsl(230 50% 2% / 0.8);
+    --shadow-glow: 0 0 40px hsl(80 90% 70% / 0.4);
+    --shadow-glow-violet: 0 0 60px hsl(140 60% 40% / 0.4);
+    --shadow-elegant: 0 20px 60px -20px hsl(80 90% 70% / 0.3);
+    --shadow-card: 0 10px 40px -10px hsl(150 50% 2% / 0.8);
 
     /* Motion */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    --sidebar-background: 230 35% 5%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 186 100% 55%;
-    --sidebar-primary-foreground: 230 35% 5%;
-    --sidebar-accent: 230 25% 12%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 230 30% 18%;
-    --sidebar-ring: 186 100% 55%;
+    --sidebar-background: 150 20% 5%;
+    --sidebar-foreground: 80 30% 96%;
+    --sidebar-primary: 80 90% 70%;
+    --sidebar-primary-foreground: 150 30% 5%;
+    --sidebar-accent: 150 15% 12%;
+    --sidebar-accent-foreground: 80 30% 96%;
+    --sidebar-border: 150 20% 18%;
+    --sidebar-ring: 80 90% 70%;
   }
 }
 
@@ -82,8 +82,8 @@
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', system-ui, sans-serif;
     background-image:
-      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(270 85% 25% / 0.3), transparent),
-      radial-gradient(ellipse 60% 40% at 80% 50%, hsl(186 100% 20% / 0.2), transparent);
+      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(140 60% 20% / 0.35), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 50%, hsl(80 90% 30% / 0.2), transparent);
     background-attachment: fixed;
   }
 

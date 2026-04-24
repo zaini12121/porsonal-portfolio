@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import logo from "@/assets/logo.png";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -34,9 +35,16 @@ export const Navbar = () => {
             scrolled ? "glass shadow-card-elegant" : ""
           }`}
         >
-          <a href="#home" className="flex items-center gap-2 font-display font-bold">
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-primary shadow-glow animate-pulse-glow" />
-            <span className="text-gradient">Zain.dev</span>
+          <a href="#home" className="flex items-center gap-2.5 font-display font-bold group">
+            <img
+              src={logo}
+              alt="MZ.dev logo"
+              width={40}
+              height={40}
+              className="h-9 w-9 object-contain transition-transform group-hover:scale-110"
+              style={{ filter: "drop-shadow(0 0 12px hsl(var(--primary) / 0.6))" }}
+            />
+            <span className="hidden sm:inline text-gradient text-lg">MZ.dev</span>
           </a>
           <ul className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
             {links.map((l) => (

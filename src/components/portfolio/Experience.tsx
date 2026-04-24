@@ -4,24 +4,38 @@ import { GraduationCap, Briefcase } from "lucide-react";
 const timeline = [
   {
     icon: GraduationCap,
-    period: "2024 — Present",
+    period: "2025 — Present",
     title: "AI & Data Science",
-    org: "SMIT (Saylani Mass IT Training)",
-    text: "Studying Python, machine learning, data analysis with Pandas/NumPy, and model deployment.",
+    org: "SMIT — Saylani Mass IT Training, Faisalabad",
+    text: "Studying Python, machine learning, data analysis and practical AI applications.",
+  },
+  {
+    icon: Briefcase,
+    period: "2025",
+    title: "Introduction to Modern AI",
+    org: "Cisco Networking Academy (Online)",
+    text: "Certification course covering fundamentals of modern AI and its real-world use cases.",
   },
   {
     icon: GraduationCap,
-    period: "2023 — 2024",
-    title: "Web Development",
-    org: "SMIT (Saylani Mass IT Training)",
-    text: "Mastered HTML, CSS, JavaScript, React, and modern tooling for production-grade UIs.",
+    period: "2024 — Present",
+    title: "ICS — In Progress",
+    org: "M.C. Model Higher Secondary School · Faisalabad Board",
+    text: "Intermediate in Computer Science, building a strong foundation in CS fundamentals.",
   },
   {
     icon: Briefcase,
     period: "2024 — Present",
-    title: "Freelance Developer",
-    org: "Self-employed",
-    text: "Delivering React frontends and FastAPI + PostgreSQL backends for small business clients.",
+    title: "Web Development (Self-Taught)",
+    org: "Online resources & personal projects",
+    text: "Shipped a Student Portal, QR Menu System and personal portfolio using Python, JS and Neon DB.",
+  },
+  {
+    icon: GraduationCap,
+    period: "Completed",
+    title: "Matriculation (SSC)",
+    org: "Hassan Bin Sabit High School · Faisalabad Board",
+    text: "Secondary School Certificate — completed successfully.",
   },
 ];
 

@@ -3,28 +3,28 @@ import { ArrowUpRight, Code2 } from "lucide-react";
 
 const projects = [
   {
-    title: "NeuraChat — AI Assistant",
-    desc: "Full-stack chat app with LLM streaming responses, conversation memory and markdown rendering.",
-    tags: ["React", "FastAPI", "OpenAI", "PostgreSQL"],
+    title: "Student Portal",
+    desc: "Dual-role login (Admin & Student) with separate dashboards, attendance system, monthly fee tracker (paid/unpaid) and application submissions. Powered by a cloud PostgreSQL database on Neon.",
+    tags: ["Python", "HTML/CSS/JS", "SQL", "Neon DB"],
+    status: "Complete",
     gradient: "from-primary/30 to-secondary/30",
+    href: "https://github.com/zaini12121",
   },
   {
-    title: "DataPulse — Analytics Dashboard",
-    desc: "Real-time analytics dashboard consuming a FastAPI backend with SQLAlchemy + Alembic migrations.",
-    tags: ["TypeScript", "React", "FastAPI", "Neon"],
+    title: "QR Menu System",
+    desc: "Customers scan a QR code to open a digital restaurant menu, place online orders and book tables — all backed by a SQL database.",
+    tags: ["Python", "HTML/CSS/JS", "SQL"],
+    status: "Complete",
     gradient: "from-secondary/30 to-accent/30",
+    href: "https://github.com/zaini12121",
   },
   {
-    title: "SpamSense — ML Classifier",
-    desc: "Trained a text classifier with scikit-learn, served via FastAPI endpoint, demoed in a React UI.",
-    tags: ["Python", "scikit-learn", "Pandas", "FastAPI"],
+    title: "Personal Portfolio",
+    desc: "Responsive dark-theme portfolio with scroll animations, built with vanilla HTML5, CSS3 and JavaScript. Live on GitHub Pages.",
+    tags: ["HTML5", "CSS3", "JavaScript"],
+    status: "Complete",
     gradient: "from-accent/30 to-primary/30",
-  },
-  {
-    title: "SMIT Study Hub",
-    desc: "Student resource portal with auth, role-based access, and a content management layer.",
-    tags: ["React", "Tailwind", "PostgreSQL", "JWT"],
-    gradient: "from-primary/30 to-accent/30",
+    href: "https://zaini12121.github.io/Portfolio",
   },
 ];
 
@@ -65,6 +65,9 @@ export const Projects = () => {
                     0{i + 1} / 0{projects.length}
                   </div>
                 </div>
+                <div className="absolute top-4 left-4 glass rounded-full px-3 py-1 text-[10px] font-mono text-primary">
+                  ✓ {p.status}
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
               </div>
 
@@ -72,12 +75,24 @@ export const Projects = () => {
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="font-display text-2xl font-semibold">{p.title}</h3>
                   <div className="flex gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <button className="rounded-full glass p-2 hover:text-primary transition-colors" aria-label="GitHub">
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-full glass p-2 hover:text-primary transition-colors"
+                      aria-label="View source"
+                    >
                       <Code2 className="h-4 w-4" />
-                    </button>
-                    <button className="rounded-full bg-gradient-primary p-2 text-primary-foreground" aria-label="Open">
+                    </a>
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-full bg-gradient-primary p-2 text-primary-foreground"
+                      aria-label="Open"
+                    >
                       <ArrowUpRight className="h-4 w-4" />
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
