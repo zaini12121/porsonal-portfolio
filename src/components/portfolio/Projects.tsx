@@ -36,6 +36,7 @@ const projects: Project[] = [
     status: "Complete",
     gradient: "from-accent/30 to-primary/30",
     href: "https://mzainulabdin.lovable.app",
+    image: portfolioPreview,
   },
 ];
 
