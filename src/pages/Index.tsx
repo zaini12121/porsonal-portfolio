@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/portfolio/Navbar";
+import { MobileBottomNav } from "@/components/portfolio/MobileBottomNav";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Skills } from "@/components/portfolio/Skills";
@@ -19,6 +20,7 @@ const Index = () => {
       <Projects />
       <Experience />
       <Contact />
+      <MobileBottomNav />
     </main>
   );
 };
