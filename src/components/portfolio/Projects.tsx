@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github as GithubIcon } from "lucide-react";
+import { ArrowUpRight, Code2 } from "lucide-react";
 
 const projects = [
   {
