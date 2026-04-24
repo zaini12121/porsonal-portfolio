@@ -71,12 +71,23 @@ export const Projects = () => {
               <div
                 className={`aspect-[16/10] relative overflow-hidden bg-gradient-to-br ${p.gradient}`}
               >
-                <div className="absolute inset-0 grid-bg opacity-40" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="font-mono text-xs text-foreground/60 tracking-widest">
-                    0{i + 1} / 0{projects.length}
-                  </div>
-                </div>
+                {p.image ? (
+                  <img
+                    src={p.image}
+                    alt={`${p.title} preview`}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 grid-bg opacity-40" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="font-mono text-xs text-foreground/60 tracking-widest">
+                        0{i + 1} / 0{projects.length}
+                      </div>
+                    </div>
+                  </>
+                )}
                 <div className="absolute top-4 left-4 glass rounded-full px-3 py-1 text-[10px] font-mono text-primary">
                   ✓ {p.status}
                 </div>
