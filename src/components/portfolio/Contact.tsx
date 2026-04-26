@@ -40,7 +40,7 @@ const socials = [
   { icon: Mail, label: "Email", href: "mailto:zzawar521@gmail.com" },
   { icon: WhatsappIcon, label: "WhatsApp", href: "https://wa.me/" },
   { icon: FacebookIcon, label: "Facebook", href: "https://facebook.com" },
-  { icon: InstagramIcon, label: "Instagram", href: "https://instagram.com" },
+  { icon: InstagramIcon, label: "Instagram", href: "https://instagram.com/mz.dev2026" },
 ];
 
 export const Contact = () => {
