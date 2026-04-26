@@ -38,7 +38,7 @@ const socials = [
   { icon: GithubIcon, label: "GitHub", href: "https://github.com/zaini12121" },
   { icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/zain-ul-abdin-281985378" },
   { icon: Mail, label: "Email", href: "mailto:zzawar521@gmail.com" },
-  { icon: WhatsappIcon, label: "WhatsApp", href: "https://wa.me/" },
+  { icon: WhatsappIcon, label: "WhatsApp", href: "https://wa.me/923269656457" },
   { icon: FacebookIcon, label: "Facebook", href: "https://facebook.com" },
   { icon: InstagramIcon, label: "Instagram", href: "https://instagram.com/mz.dev2026" },
 ];
