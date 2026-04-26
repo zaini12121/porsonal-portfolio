@@ -44,14 +44,14 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-28">
-      <div className="container">
+    <section id="contact" className="relative py-20 md:py-28 pb-32 md:pb-28">
+      <div className="container px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-[2.5rem] glass p-10 md:p-16"
+          className="relative overflow-hidden rounded-3xl md:rounded-[2.5rem] glass p-6 sm:p-10 md:p-16"
         >
           <div className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
           <div className="absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-secondary/20 blur-3xl" />
