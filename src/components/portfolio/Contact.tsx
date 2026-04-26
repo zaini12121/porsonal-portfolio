@@ -56,20 +56,20 @@ export const Contact = () => {
           <div className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
           <div className="absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-secondary/20 blur-3xl" />
 
-          <div className="relative grid lg:grid-cols-2 gap-12">
+          <div className="relative grid lg:grid-cols-2 gap-10 lg:gap-12">
             <div>
               <span className="text-xs uppercase tracking-[0.3em] text-primary font-mono">
                 // say hello
               </span>
-              <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold leading-tight">
+              <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                 Let's build something <span className="text-gradient">intelligent</span>.
               </h2>
-              <p className="mt-5 text-muted-foreground max-w-md">
+              <p className="mt-5 text-muted-foreground max-w-md text-sm sm:text-base">
                 Have a project, internship opportunity, or just want to chat about AI and web
                 development? My inbox is open.
               </p>
 
-              <div className="mt-8 flex gap-3">
+              <div className="mt-8 flex flex-wrap gap-2 sm:gap-3">
                 {socials.map((s) => (
                   <a
                     key={s.label}
@@ -77,7 +77,7 @@ export const Contact = () => {
                     aria-label={s.label}
                     target="_blank"
                     rel="noreferrer"
-                    className="glass rounded-2xl p-4 transition-all hover:-translate-y-1 hover:text-primary"
+                    className="glass rounded-2xl p-3 sm:p-4 transition-all hover:-translate-y-1 hover:text-primary"
                   >
                     <s.icon className="h-5 w-5" />
                   </a>
