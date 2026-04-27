@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
 import { toast } from "sonner";
+import { z } from "zod";
 
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -45,20 +46,49 @@ const socials = [
 
 const WHATSAPP_NUMBER = "923269656457";
 
+const contactSchema = z.object({
+  name: z
+    .string()
+    .trim()
+    .min(2, { message: "Name must be at least 2 characters." })
+    .max(100, { message: "Name must be less than 100 characters." }),
+  email: z
+    .string()
+    .trim()
+    .email({ message: "Please enter a valid email address." })
+    .max(255, { message: "Email must be less than 255 characters." }),
+  subject: z
+    .string()
+    .trim()
+    .max(150, { message: "Subject must be less than 150 characters." })
+    .optional(),
+  message: z
+    .string()
+    .trim()
+    .min(10, { message: "Message must be at least 10 characters." })
+    .max(1000, { message: "Message must be less than 1000 characters." }),
+});
+
 export const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
-    const name = String(data.get("name") || "").trim();
-    const email = String(data.get("email") || "").trim();
-    const subject = String(data.get("subject") || "").trim();
-    const message = String(data.get("message") || "").trim();
 
-    if (!name || !email || !message) {
-      toast.error("Please fill in your name, email and message.");
+    const result = contactSchema.safeParse({
+      name: String(data.get("name") || ""),
+      email: String(data.get("email") || ""),
+      subject: String(data.get("subject") || ""),
+      message: String(data.get("message") || ""),
+    });
+
+    if (!result.success) {
+      const firstError = result.error.issues[0]?.message ?? "Please check the form fields.";
+      toast.error(firstError);
       return;
     }
+
+    const { name, email, subject, message } = result.data;
 
     const text =
       `*New message from portfolio*%0A%0A` +
@@ -121,6 +151,7 @@ export const Contact = () => {
                 <input
                   required
                   name="name"
+                  maxLength={100}
                   placeholder="Your name"
                   className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors"
                 />
@@ -128,12 +159,14 @@ export const Contact = () => {
                   required
                   type="email"
                   name="email"
+                  maxLength={255}
                   placeholder="Email address"
                   className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors"
                 />
               </div>
               <input
                 name="subject"
+                maxLength={150}
                 placeholder="Subject"
                 className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors"
               />
@@ -141,6 +174,7 @@ export const Contact = () => {
                 required
                 name="message"
                 rows={5}
+                maxLength={1000}
                 placeholder="Tell me about your project..."
                 className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors resize-none"
               />
