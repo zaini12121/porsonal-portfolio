@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
 import { toast } from "sonner";
+import { z } from "zod";
 
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
