@@ -151,6 +151,7 @@ export const Contact = () => {
                 <input
                   required
                   name="name"
+                  maxLength={100}
                   placeholder="Your name"
                   className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors"
                 />
@@ -158,12 +159,14 @@ export const Contact = () => {
                   required
                   type="email"
                   name="email"
+                  maxLength={255}
                   placeholder="Email address"
                   className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors"
                 />
               </div>
               <input
                 name="subject"
+                maxLength={150}
                 placeholder="Subject"
                 className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors"
               />
@@ -171,6 +174,7 @@ export const Contact = () => {
                 required
                 name="message"
                 rows={5}
+                maxLength={1000}
                 placeholder="Tell me about your project..."
                 className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors resize-none"
               />
