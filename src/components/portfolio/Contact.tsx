@@ -43,11 +43,35 @@ const socials = [
   { icon: InstagramIcon, label: "Instagram", href: "https://instagram.com/mz.dev2026" },
 ];
 
+const WHATSAPP_NUMBER = "923269656457";
+
 export const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Message sent — I'll get back to you soon!");
-    (e.target as HTMLFormElement).reset();
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const subject = String(data.get("subject") || "").trim();
+    const message = String(data.get("message") || "").trim();
+
+    if (!name || !email || !message) {
+      toast.error("Please fill in your name, email and message.");
+      return;
+    }
+
+    const text =
+      `*New message from portfolio*%0A%0A` +
+      `*Name:* ${encodeURIComponent(name)}%0A` +
+      `*Email:* ${encodeURIComponent(email)}%0A` +
+      (subject ? `*Subject:* ${encodeURIComponent(subject)}%0A` : "") +
+      `%0A*Message:*%0A${encodeURIComponent(message)}`;
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+
+    toast.success("Opening WhatsApp — just hit send!");
+    form.reset();
   };
 
   return (
