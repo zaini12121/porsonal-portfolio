@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import { Mail, Send } from "lucide-react";
+import { Check, Mail, Send } from "lucide-react";
+import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
 
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -56,12 +58,7 @@ const contactSchema = z.object({
     .string()
     .trim()
     .email({ message: "Please enter a valid email address." })
-    .max(255, { message: "Email must be less than 255 characters." }),
-  subject: z
-    .string()
-    .trim()
-    .max(150, { message: "Subject must be less than 150 characters." })
-    .optional(),
+    .max(255, { message: "Please enter a valid email address." }),
   message: z
     .string()
     .trim()
@@ -69,16 +66,21 @@ const contactSchema = z.object({
     .max(1000, { message: "Message must be less than 1000 characters." }),
 });
 
+type Status = "idle" | "sending" | "sent";
+
 export const Contact = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [status, setStatus] = useState<Status>("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (status !== "idle") return;
+
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
 
     const result = contactSchema.safeParse({
       name: String(data.get("name") || ""),
       email: String(data.get("email") || ""),
-      subject: String(data.get("subject") || ""),
       message: String(data.get("message") || ""),
     });
 
@@ -88,20 +90,23 @@ export const Contact = () => {
       return;
     }
 
-    const { name, email, subject, message } = result.data;
+    setStatus("sending");
+    try {
+      const { data: res, error } = await supabase.functions.invoke("send-contact-email", {
+        body: result.data,
+      });
+      if (error) throw error;
+      if (!res?.success) throw new Error(res?.error || "Failed to send");
 
-    const text =
-      `*New message from portfolio*%0A%0A` +
-      `*Name:* ${encodeURIComponent(name)}%0A` +
-      `*Email:* ${encodeURIComponent(email)}%0A` +
-      (subject ? `*Subject:* ${encodeURIComponent(subject)}%0A` : "") +
-      `%0A*Message:*%0A${encodeURIComponent(message)}`;
-
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
-    window.open(url, "_blank", "noopener,noreferrer");
-
-    toast.success("Opening WhatsApp — just hit send!");
-    form.reset();
+      setStatus("sent");
+      toast.success("Message sent successfully!");
+      form.reset();
+      setTimeout(() => setStatus("idle"), 3000);
+    } catch (err) {
+      console.error(err);
+      toast.error("Could not send. Please try again.");
+      setStatus("idle");
+    }
   };
 
   return (
@@ -164,12 +169,6 @@ export const Contact = () => {
                   className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors"
                 />
               </div>
-              <input
-                name="subject"
-                maxLength={150}
-                placeholder="Subject"
-                className="w-full rounded-2xl bg-input/60 border border-border px-5 py-4 text-sm focus:outline-none focus:border-primary transition-colors"
-              />
               <textarea
                 required
                 name="message"
@@ -181,10 +180,21 @@ export const Contact = () => {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 font-medium text-primary-foreground shadow-glow transition-transform hover:scale-105"
+                  disabled={status !== "idle"}
+                  className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 font-medium text-primary-foreground shadow-glow transition-transform hover:scale-105 disabled:opacity-80 disabled:hover:scale-100"
                 >
-                  Send message
-                  <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  {status === "sending" && "Sending..."}
+                  {status === "sent" && (
+                    <>
+                      Sent successfully <Check className="h-4 w-4" />
+                    </>
+                  )}
+                  {status === "idle" && (
+                    <>
+                      Send message
+                      <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </>
+                  )}
                 </button>
               </div>
             </form>
