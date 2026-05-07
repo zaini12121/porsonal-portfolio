@@ -89,15 +89,6 @@ export const Hero = () => {
                 <Download className="h-4 w-4 text-primary transition-transform group-hover:translate-y-0.5" />
                 Download CV
               </a>
-              <a
-                href="/Muhammad_Zain_CV.docx"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full glass px-7 py-3.5 font-medium text-foreground transition-colors hover:border-primary/60"
-              >
-                <Eye className="h-4 w-4 text-primary" />
-                View CV
-              </a>
             </motion.div>
 
             <motion.div
