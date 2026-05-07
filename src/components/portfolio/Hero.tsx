@@ -1,8 +1,24 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import { ArrowRight, MapPin, Sparkles, Download, Eye } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export const Hero = () => {
+  const roles = [
+    "AI & Data Science Student",
+    "AI-Driven Developer",
+    "Web Designer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Vibe Coder",
+    "Full-Stack Developer",
+  ];
+  const [roleIndex, setRoleIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setRoleIndex((i) => (i + 1) % roles.length), 2200);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16">
       <img
@@ -39,6 +55,21 @@ export const Hero = () => {
               Muhammad <br />
               <span className="text-gradient animate-gradient">Zain-ul-Abdin</span>
             </motion.h1>
+
+            <div className="mt-4 h-8 flex items-center justify-center overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={roles[roleIndex]}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.4 }}
+                  className="text-base sm:text-lg font-medium text-gradient"
+                >
+                  {roles[roleIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </div>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
