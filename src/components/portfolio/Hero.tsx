@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import { ArrowRight, MapPin, Sparkles, Download, Eye } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
