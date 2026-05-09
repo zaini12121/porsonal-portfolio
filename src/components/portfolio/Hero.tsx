@@ -56,7 +56,7 @@ export const Hero = () => {
               <span className="text-gradient animate-gradient">Zain-ul-Abdin</span>
             </motion.h1>
 
-            <div className="mt-4 h-8 flex items-center justify-center overflow-hidden">
+            <div className="mt-5 sm:mt-6 h-9 sm:h-10 flex items-center justify-center overflow-hidden tracking-wide">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={roles[roleIndex]}
@@ -64,7 +64,7 @@ export const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -12 }}
                   transition={{ duration: 0.4 }}
-                  className="text-base sm:text-lg font-medium text-gradient"
+                  className="text-lg md:text-xl font-semibold text-gradient animate-gradient leading-none"
                 >
                   {roles[roleIndex]}
                 </motion.span>
