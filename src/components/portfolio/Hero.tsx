@@ -14,10 +14,30 @@ export const Hero = () => {
     "Full-Stack Developer",
   ];
   const [roleIndex, setRoleIndex] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [phase, setPhase] = useState<"typing" | "deleting">("typing");
+
   useEffect(() => {
-    const id = setInterval(() => setRoleIndex((i) => (i + 1) % roles.length), 2200);
-    return () => clearInterval(id);
-  }, []);
+    const current = roles[roleIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (phase === "typing") {
+      if (displayed.length < current.length) {
+        timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 70);
+      } else {
+        timeout = setTimeout(() => setPhase("deleting"), 1400);
+      }
+    } else {
+      if (displayed.length > 0) {
+        timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length - 1)), 35);
+      } else {
+        setRoleIndex((i) => (i + 1) % roles.length);
+        setPhase("typing");
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayed, phase, roleIndex]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16">
@@ -56,19 +76,14 @@ export const Hero = () => {
               <span className="text-gradient animate-gradient">Zain-ul-Abdin</span>
             </motion.h1>
 
-            <div className="mt-5 sm:mt-6 h-9 sm:h-10 flex items-center justify-center overflow-hidden tracking-wide">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={roles[roleIndex]}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -12 }}
-                  transition={{ duration: 0.4 }}
-                  className="text-lg md:text-xl font-semibold text-gradient animate-gradient leading-none"
-                >
-                  {roles[roleIndex]}
-                </motion.span>
-              </AnimatePresence>
+            <div className="mt-5 sm:mt-6 h-9 sm:h-10 flex items-center justify-center tracking-wide">
+              <span className="text-lg md:text-xl font-semibold text-gradient animate-gradient leading-none">
+                {displayed}
+              </span>
+              <span
+                className="ml-1 inline-block w-[2px] h-5 md:h-6 bg-primary align-middle animate-pulse"
+                aria-hidden="true"
+              />
             </div>
 
             <motion.p
