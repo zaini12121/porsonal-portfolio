@@ -107,8 +107,7 @@ export const Hero = () => {
               className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl font-bold leading-[0.95] text-center"
             >
               {["Muhammad", "Zain-ul-Abdin"].map((word, idx) => (
-                <span key={word} className="inline-block">
-                  {idx === 1 && <br />}
+                <span key={word} className="block">
                   {word.split("").map((ch, i) => (
                     <motion.span
                       key={`${word}-${i}`}
