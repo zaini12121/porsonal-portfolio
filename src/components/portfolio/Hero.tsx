@@ -14,10 +14,30 @@ export const Hero = () => {
     "Full-Stack Developer",
   ];
   const [roleIndex, setRoleIndex] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [phase, setPhase] = useState<"typing" | "deleting">("typing");
+
   useEffect(() => {
-    const id = setInterval(() => setRoleIndex((i) => (i + 1) % roles.length), 2200);
-    return () => clearInterval(id);
-  }, []);
+    const current = roles[roleIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (phase === "typing") {
+      if (displayed.length < current.length) {
+        timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 70);
+      } else {
+        timeout = setTimeout(() => setPhase("deleting"), 1400);
+      }
+    } else {
+      if (displayed.length > 0) {
+        timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length - 1)), 35);
+      } else {
+        setRoleIndex((i) => (i + 1) % roles.length);
+        setPhase("typing");
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayed, phase, roleIndex]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16">
