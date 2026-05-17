@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Code2 } from "lucide-react";
 import portfolioPreview from "@/assets/portfolio-preview.webp";
+import paperGenaiPreview from "@/assets/paper-genai.png";
 
 type Project = {
   title: string;
@@ -21,6 +22,7 @@ const liveProjects: Project[] = [
     status: "Live",
     gradient: "from-primary/30 to-secondary/30",
     liveUrl: "https://paper-genai.lovable.app",
+    image: paperGenaiPreview,
   },
   {
     title: "Speed Lab",
