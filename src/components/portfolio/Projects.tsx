@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Code2 } from "lucide-react";
 import portfolioPreview from "@/assets/portfolio-preview.webp";
 import paperGenaiPreview from "@/assets/paper-genai.png";
+import speedLabPreview from "@/assets/speed lab.png";
 
 type Project = {
   title: string;
@@ -31,6 +32,7 @@ const liveProjects: Project[] = [
     status: "Live",
     gradient: "from-secondary/30 to-accent/30",
     liveUrl: "https://speed-lab.vercel.app",
+    image: speedLabPreview,
   },
   {
     title: "Zainulabdin Project",
