@@ -33,7 +33,6 @@ developer = {
     "location" : "Faisalabad, Pakistan 🇵🇰",
     "studying" : ["AI & Data Science @ SMIT", "ICS @ M.C. Model Higher Secondary School"],
     "certified": "Cisco Networking Academy — Introduction to Modern AI",
-    "currently": "Building PaperCraft AI 📄 + SmartEdu Nexus 🏫",
     "motto"    : "Ship it. Iterate. Level up.",
 }
 ```
