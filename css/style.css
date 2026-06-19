@@ -671,7 +671,7 @@ header.scrolled .nav-container {
 /* Scroll indicator */
 .scroll-indicator {
   pointer-events: none;
-  position: absolute; bottom: 1.5rem; left: 50%;
+  position: absolute; bottom: calc(1.5rem - 15px); left: 50%;
   transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center;
   gap: 0.25rem;

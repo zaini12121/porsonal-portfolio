@@ -1,665 +1,1531 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhammad Zain-ul-Abdin — Web Developer &amp; AI/Data Science Student</title>
-    <meta name="description" content="Portfolio of Muhammad Zain-ul-Abdin — Web Developer and AI &amp; Data Science student at SMIT. React, FastAPI, PostgreSQL, ML projects.">
-    <meta name="author" content="Muhammad Zain-ul-Abdin" />
-    <link rel="icon" href="assets/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="assets/favicon.png" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Muhammad Zain-ul-Abdin — Web Developer &amp; AI/Data Science Student
+        </title>
+        <meta
+            name="description"
+            content="Portfolio of Muhammad Zain-ul-Abdin — Web Developer and AI &amp; Data Science student at SMIT. React, FastAPI, PostgreSQL, ML projects."
+        />
+        <meta name="author" content="Muhammad Zain-ul-Abdin" />
+        <link rel="icon" href="assets/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="assets/favicon.png" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Muhammad Zain-ul-Abdin — Web Developer &amp; AI/Data Science Student">
-    <meta property="og:description" content="Portfolio of Muhammad Zain-ul-Abdin — Web Developer and AI &amp; Data Science student at SMIT. React, FastAPI, PostgreSQL, ML projects.">
-    <meta property="og:image" content="assets/portfolio-preview.webp">
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="Muhammad Zain-ul-Abdin — Web Developer &amp; AI/Data Science Student"
+        />
+        <meta
+            property="og:description"
+            content="Portfolio of Muhammad Zain-ul-Abdin — Web Developer and AI &amp; Data Science student at SMIT. React, FastAPI, PostgreSQL, ML projects."
+        />
+        <meta property="og:image" content="assets/portfolio-preview.webp" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Muhammad Zain-ul-Abdin — Web Developer &amp; AI/Data Science Student">
-    <meta name="twitter:description" content="Portfolio of Muhammad Zain-ul-Abdin — Web Developer and AI &amp; Data Science student at SMIT. React, FastAPI, PostgreSQL, ML projects.">
-    <meta name="twitter:image" content="assets/portfolio-preview.webp">
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Muhammad Zain-ul-Abdin — Web Developer &amp; AI/Data Science Student"
+        />
+        <meta
+            name="twitter:description"
+            content="Portfolio of Muhammad Zain-ul-Abdin — Web Developer and AI &amp; Data Science student at SMIT. React, FastAPI, PostgreSQL, ML projects."
+        />
+        <meta name="twitter:image" content="assets/portfolio-preview.webp" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    
-    <!-- Custom Style -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
 
-  <body>
-    <!-- SPLASH SCREEN -->
-    <div id="splash-screen">
-      <div class="splash-orbs pointer-events-none">
-        <div class="orb-1 animate-pulse-glow"></div>
-        <div class="orb-2 animate-pulse-glow"></div>
-      </div>
-      <div class="grid-bg absolute inset-0 opacity-30" style="position: absolute; inset: 0;"></div>
-      <div class="splash-logo-container">
-        <div class="splash-logo-wrapper">
-          <div class="splash-logo-glow"></div>
-          <img src="assets/logo.png" alt="Muhammad Zain-ul-Abdin logo" class="splash-logo" />
-        </div>
-        <div class="splash-title">
-          <span class="text-gradient">MUHAMMAD ZAIN-UL-ABDIN</span>
-        </div>
-        <div class="splash-subtitle font-mono">
-          Web Dev · AI · Data Science
-        </div>
-        <div class="splash-loader-bar">
-          <div class="splash-loader-progress"></div>
-        </div>
-      </div>
-    </div>
+        <!-- Custom Style -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-    <!-- MAIN VIEWPORT -->
-    <main>
-      <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
-        Muhammad Zain-ul-Abdin — Web Developer and AI & Data Science Student at SMIT
-      </h1>
-
-      <!-- HEADER & NAVBAR -->
-      <header>
-        <div class="container">
-          <nav class="nav-container">
-            <a href="#home" class="logo-link">
-              <img src="assets/logo.png" alt="MZ.dev logo" class="logo-img" />
-              <span class="text-gradient" style="font-size: 1.125rem;">MZ.dev</span>
-            </a>
-            <ul class="nav-links">
-              <li><a href="#home" class="active">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#contact" class="btn-hire">Hire me</a>
-          </nav>
-        </div>
-      </header>
-
-      <!-- HERO SECTION -->
-      <section id="home">
-        <img src="assets/hero-bg.jpg" alt="" class="hero-bg-img" aria-hidden="true" />
-        <div class="hero-overlay"></div>
-        <div class="grid-bg hero-grid-bg"></div>
-
-        <!-- Drifting particles dynamically generated here -->
-        <div class="particle-container"></div>
-
-        <div class="container" style="position: relative; z-index: 10;">
-          <div class="hero-content">
-            <div class="hero-badge glass">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 0.875rem; height: 0.875rem;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
-              Available for internships & freelance
-              <span class="status-dot">
-                <span class="ping"></span>
-                <span class="dot"></span>
-              </span>
+    <body>
+        <!-- SPLASH SCREEN -->
+        <div id="splash-screen">
+            <div class="splash-orbs pointer-events-none">
+                <div class="orb-1 animate-pulse-glow"></div>
+                <div class="orb-2 animate-pulse-glow"></div>
             </div>
+            <div
+                class="grid-bg absolute inset-0 opacity-30"
+                style="position: absolute; inset: 0"
+            ></div>
+            <div class="splash-logo-container">
+                <div class="splash-logo-wrapper">
+                    <div class="splash-logo-glow"></div>
+                    <img
+                        src="assets/logo.png"
+                        alt="Muhammad Zain-ul-Abdin logo"
+                        class="splash-logo"
+                    />
+                </div>
+                <div class="splash-title">
+                    <span class="text-gradient">MUHAMMAD ZAIN-UL-ABDIN</span>
+                </div>
+                <div class="splash-subtitle font-mono">
+                    Web Dev · AI · Data Science
+                </div>
+                <div class="splash-loader-bar">
+                    <div class="splash-loader-progress"></div>
+                </div>
+            </div>
+        </div>
 
-            <h1 class="hero-title">
-              <span>Muhammad</span>
-              <span class="text-gradient">Zain-ul-Abdin</span>
+        <!-- MAIN VIEWPORT -->
+        <main>
+            <h1
+                style="
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    border: 0;
+                "
+            >
+                Muhammad Zain-ul-Abdin — Web Developer and AI & Data Science
+                Student at SMIT
             </h1>
 
-            <div class="typing-container">
-              <span class="typing-text text-gradient"></span>
-              <span class="cursor-blink" aria-hidden="true"></span>
-            </div>
-
-            <p class="hero-description">
-              AI & Data Science student at <span>SMIT</span> · Python Developer · Full-Stack Web Developer. I build real-world apps with Python, JavaScript and cloud PostgreSQL.
-            </p>
-
-            <div class="hero-location">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              Faisalabad, Pakistan
-            </div>
-
-            <div class="hero-buttons">
-              <a href="#projects" class="btn-primary">
-                View Projects
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
-              <a href="#contact" class="btn-glass">Get in touch</a>
-              <a href="assets/Muhammad_Zain_CV.docx" download class="btn-glass cv-download">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-                Download CV
-              </a>
-            </div>
-
-            <div class="hero-stats">
-              <div class="stat-item">
-                <div class="stat-number text-gradient">3+</div>
-                <div class="stat-label">Real projects</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number text-gradient">SMIT</div>
-                <div class="stat-label">AI & DS '25</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number text-gradient">ICS</div>
-                <div class="stat-label">In progress</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- floating ambient background orbs -->
-        <div class="hero-orbs">
-          <div class="orb orb-1"></div>
-          <div class="orb orb-2"></div>
-          <div class="orb orb-3"></div>
-        </div>
-
-        <!-- scroll down indicator -->
-        <div class="scroll-indicator">
-          <span>Scroll</span>
-          <div class="scroll-bar">
-            <div class="scroll-dot"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT SECTION -->
-      <section id="about">
-        <div class="container">
-          <div class="about-grid">
-            <div class="about-image-container">
-              <div class="about-glow"></div>
-              <div class="about-image-wrapper glow-border">
-                <img src="assets/zain-hero.png" alt="Muhammad Zain-ul-Abdin portrait" class="about-img" loading="lazy" />
-                <div class="about-image-overlay"></div>
-                <div class="about-terminal-tag glass">
-                  <span>$</span> whoami → zain-ul-abdin · faisalabad
+            <!-- HEADER & NAVBAR -->
+            <header>
+                <div class="container">
+                    <nav class="nav-container">
+                        <a href="#home" class="logo-link">
+                            <img
+                                src="assets/logo.png"
+                                alt="MZ.dev logo"
+                                class="logo-img"
+                            />
+                            <span
+                                class="text-gradient"
+                                style="font-size: 1.125rem"
+                                >MZ.dev</span
+                            >
+                        </a>
+                        <ul class="nav-links">
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                        <a href="#contact" class="btn-hire">Hire me</a>
+                    </nav>
                 </div>
-              </div>
-            </div>
+            </header>
 
-            <div class="about-text-container">
-              <span class="section-tag">// About me</span>
-              <h2 class="section-title">
-                Self-driven student at the <span class="text-gradient">edge of web & AI</span>
-              </h2>
-              <p>
-                I'm an AI & Data Science student at <span>SMIT</span> (Saylani Mass IT Training) in Faisalabad, with hands-on experience in Python and full-stack web development. I've already shipped real-world projects — a cloud-connected Student Portal and a QR-based Restaurant System.
-              </p>
-              <p>
-                Currently completing my ICS at M.C. Model Higher Secondary School while actively growing in AI and Machine Learning.
-              </p>
+            <!-- HERO SECTION -->
+            <section id="home">
+                <img
+                    src="assets/hero-bg.jpg"
+                    alt=""
+                    class="hero-bg-img"
+                    aria-hidden="true"
+                />
+                <div class="hero-overlay"></div>
+                <div class="grid-bg hero-grid-bg"></div>
 
-              <div class="about-highlights">
-                <div class="highlight-card glass">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="highlight-icon"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-                  <div class="highlight-title">Full-stack web</div>
-                  <div class="highlight-desc">Python backends, HTML/CSS/JS frontends, responsive UIs.</div>
+                <!-- Drifting particles dynamically generated here -->
+                <div class="particle-container"></div>
+
+                <div class="container" style="position: relative; z-index: 10">
+                    <div class="hero-content">
+                        <div class="hero-badge glass">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                style="width: 0.875rem; height: 0.875rem"
+                            >
+                                <path
+                                    d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"
+                                />
+                            </svg>
+                            Available for internships & freelance
+                            <span class="status-dot">
+                                <span class="ping"></span>
+                                <span class="dot"></span>
+                            </span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            <span>Muhammad</span>
+                            <span class="text-gradient">Zain-ul-Abdin</span>
+                        </h1>
+
+                        <div class="typing-container">
+                            <span class="typing-text text-gradient"></span>
+                            <span
+                                class="cursor-blink"
+                                aria-hidden="true"
+                            ></span>
+                        </div>
+
+                        <p class="hero-description">
+                            AI & Data Science student at <span>SMIT</span> ·
+                            Python Developer · Full-Stack Web Developer. I build
+                            real-world apps with Python, JavaScript and cloud
+                            PostgreSQL.
+                        </p>
+
+                        <div class="hero-location">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                style="width: 1rem; height: 1rem"
+                            >
+                                <path
+                                    d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                                />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Faisalabad, Pakistan
+                        </div>
+
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn-primary">
+                                View Projects
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    style="width: 1rem; height: 1rem"
+                                >
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="#contact" class="btn-glass"
+                                >Get in touch</a
+                            >
+                            <a
+                                href="assets/Muhammad_Zain_CV.docx"
+                                download
+                                class="btn-glass cv-download"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    style="width: 1rem; height: 1rem"
+                                >
+                                    <path
+                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                    />
+                                    <polyline points="7 10 12 15 17 10" />
+                                    <line x1="12" x2="12" y1="15" y2="3" />
+                                </svg>
+                                Download CV
+                            </a>
+                        </div>
+
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number text-gradient">3+</div>
+                                <div class="stat-label">Real projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number text-gradient">
+                                    SMIT
+                                </div>
+                                <div class="stat-label">AI & DS '25</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number text-gradient">ICS</div>
+                                <div class="stat-label">In progress</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="highlight-card glass">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="highlight-icon"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2Z"/></svg>
-                  <div class="highlight-title">AI & ML</div>
-                  <div class="highlight-desc">Learning modern AI at SMIT + Cisco Networking Academy.</div>
-                </div>
-                <div class="highlight-card glass">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="highlight-icon"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
-                  <div class="highlight-title">Cloud DB</div>
-                  <div class="highlight-desc">PostgreSQL on Neon, schema design and SQL.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- SKILLS SECTION -->
-      <section id="skills">
-        <div class="container">
-          <div style="max-width: 40rem;">
-            <span class="section-tag">// tech stack</span>
-            <h2 class="section-title">Tools I build <span class="text-gradient">with</span></h2>
-            <p class="section-desc">A modern, typed, end-to-end stack — from pixels to production databases.</p>
-          </div>
+                <!-- floating ambient background orbs -->
+                <div class="hero-orbs">
+                    <div class="orb orb-1"></div>
+                    <div class="orb orb-2"></div>
+                    <div class="orb orb-3"></div>
+                </div>
 
-          <div class="skills-grid">
-            <!-- Languages -->
-            <div class="skills-card glass glow-border">
-              <div class="skills-card-glow"></div>
-              <div class="skills-card-content">
-                <span class="skills-tag">core</span>
-                <h3 class="skills-title">Languages</h3>
-                <ul class="skills-list">
-                  <li class="skills-item"><span class="skills-bullet"></span>Python</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>FastAPI</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>SQL</li>
+                <!-- scroll down indicator -->
+                <div class="scroll-indicator">
+                    <span>Scroll</span>
+                    <div class="scroll-bar">
+                        <div class="scroll-dot"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section id="about">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-image-container">
+                            <div class="about-glow"></div>
+                            <div class="about-image-wrapper glow-border">
+                                <img
+                                    src="assets/zain-hero.png"
+                                    alt="Muhammad Zain-ul-Abdin portrait"
+                                    class="about-img"
+                                    loading="lazy"
+                                />
+                                <div class="about-image-overlay"></div>
+                                <div class="about-terminal-tag glass">
+                                    <span>$</span> whoami → zain-ul-abdin ·
+                                    faisalabad
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-text-container">
+                            <span class="section-tag">// About me</span>
+                            <h2 class="section-title">
+                                Self-driven student at the
+                                <span class="text-gradient"
+                                    >edge of web & AI</span
+                                >
+                            </h2>
+                            <p>
+                                I'm an AI & Data Science student at
+                                <span>SMIT</span> (Saylani Mass IT Training) in
+                                Faisalabad, with hands-on experience in Python
+                                and full-stack web development. I've already
+                                shipped real-world projects — a cloud-connected
+                                Student Portal and a QR-based Restaurant System.
+                            </p>
+                            <p>
+                                Currently completing my ICS at M.C. Model Higher
+                                Secondary School while actively growing in AI
+                                and Machine Learning.
+                            </p>
+
+                            <div class="about-highlights">
+                                <div class="highlight-card glass">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="highlight-icon"
+                                    >
+                                        <path d="m18 16 4-4-4-4" />
+                                        <path d="m6 8-4 4 4 4" />
+                                        <path d="m14.5 4-5 16" />
+                                    </svg>
+                                    <div class="highlight-title">
+                                        Full-stack web
+                                    </div>
+                                    <div class="highlight-desc">
+                                        Python backends, HTML/CSS/JS frontends,
+                                        responsive UIs.
+                                    </div>
+                                </div>
+                                <div class="highlight-card glass">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="highlight-icon"
+                                    >
+                                        <path
+                                            d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2Z"
+                                        />
+                                        <path
+                                            d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2Z"
+                                        />
+                                    </svg>
+                                    <div class="highlight-title">AI & ML</div>
+                                    <div class="highlight-desc">
+                                        Learning modern AI at SMIT + Cisco
+                                        Networking Academy.
+                                    </div>
+                                </div>
+                                <div class="highlight-card glass">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="highlight-icon"
+                                    >
+                                        <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                        <path
+                                            d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"
+                                        />
+                                        <path
+                                            d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"
+                                        />
+                                    </svg>
+                                    <div class="highlight-title">Cloud DB</div>
+                                    <div class="highlight-desc">
+                                        PostgreSQL on Neon, schema design and
+                                        SQL.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS SECTION -->
+            <section id="skills">
+                <div class="container">
+                    <div style="max-width: 40rem">
+                        <span class="section-tag">// tech stack</span>
+                        <h2 class="section-title">
+                            Tools I build
+                            <span class="text-gradient">with</span>
+                        </h2>
+                        <p class="section-desc">
+                            A modern, typed, end-to-end stack — from pixels to
+                            production databases.
+                        </p>
+                    </div>
+
+                    <div class="skills-grid">
+                        <!-- Languages -->
+                        <div class="skills-card glass glow-border">
+                            <div class="skills-card-glow"></div>
+                            <div class="skills-card-content">
+                                <span class="skills-tag">core</span>
+                                <h3 class="skills-title">Languages</h3>
+                                <ul class="skills-list">
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span
+                                        >Python
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span
+                                        >FastAPI
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span>SQL
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Frontend -->
+                        <div class="skills-card glass glow-border">
+                            <div class="skills-card-glow"></div>
+                            <div class="skills-card-content">
+                                <span class="skills-tag">ui / ux</span>
+                                <h3 class="skills-title">Frontend</h3>
+                                <ul class="skills-list">
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span>HTML5
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span>CSS3
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span>java
+                                        script
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span
+                                        >responsive design
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Backend & DB -->
+                        <div class="skills-card glass glow-border">
+                            <div class="skills-card-glow"></div>
+                            <div class="skills-card-content">
+                                <span class="skills-tag">data layer</span>
+                                <h3 class="skills-title">Backend & DB</h3>
+                                <ul class="skills-list">
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span
+                                        >Python
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span>Neon
+                                        DB
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span
+                                        >mongodb
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span
+                                        >PostgreSQL
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span
+                                        >Vercel hosting
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Tools & AI -->
+                        <div class="skills-card glass glow-border">
+                            <div class="skills-card-glow"></div>
+                            <div class="skills-card-content">
+                                <span class="skills-tag">workflow</span>
+                                <h3 class="skills-title">Tools & AI</h3>
+                                <ul class="skills-list">
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span>Git ·
+                                        GitHub
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span
+                                        >Cursor IDE
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span
+                                        >Antigravity IDE
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span
+                                        >github pages
+                                    </li>
+                                    <li class="skills-item">
+                                        <span class="skills-bullet"></span
+                                        >claude ai
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS SECTION -->
+            <section id="projects">
+                <div class="container">
+                    <!-- Live Projects Section -->
+                    <div class="projects-header">
+                        <div>
+                            <span class="section-tag">// Live Projects</span>
+                            <h2 class="section-title">
+                                Projects that
+                                <span class="text-gradient">ship</span>
+                            </h2>
+                        </div>
+                        <p class="projects-header-desc">
+                            Web applications and tools that are currently live
+                            and in production.
+                        </p>
+                    </div>
+
+                    <div class="projects-grid">
+                        <!-- Paper GenAI -->
+                        <article class="project-card glass glow-border">
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="assets/paper-genai.png"
+                                    alt="Paper GenAI preview"
+                                    class="project-img"
+                                    loading="lazy"
+                                />
+                                <span class="project-status glass">✓ Live</span>
+                                <div class="project-image-gradient"></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-info-header">
+                                    <h3 class="project-card-title">
+                                        Paper GenAI
+                                    </h3>
+                                    <div class="project-actions">
+                                        <a
+                                            href="https://paper-genai.vercel.app"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            class="project-btn-icon project-btn-live"
+                                            title="Open Live Site"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path d="M7 17 17 7" />
+                                                <path d="M7 7h10v10" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="project-desc">
+                                    An AI-powered tool designed to streamline
+                                    document and paper generation using advanced
+                                    language models.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="project-tag">React</span>
+                                    <span class="project-tag">AI</span>
+                                    <span class="project-tag">Web App</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Speed Lab -->
+                        <article class="project-card glass glow-border">
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="assets/speed lab.png"
+                                    alt="Speed Lab preview"
+                                    class="project-img"
+                                    loading="lazy"
+                                />
+                                <span class="project-status glass">✓ Live</span>
+                                <div class="project-image-gradient"></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-info-header">
+                                    <h3 class="project-card-title">
+                                        Speed Lab
+                                    </h3>
+                                    <div class="project-actions">
+                                        <a
+                                            href="https://speed-lab.vercel.app"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            class="project-btn-icon project-btn-live"
+                                            title="Open Live Site"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path d="M7 17 17 7" />
+                                                <path d="M7 7h10v10" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="project-desc">
+                                    A feature-rich typing speed testing and
+                                    network diagnostic tool built for
+                                    performance tracking.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="project-tag">React</span>
+                                    <span class="project-tag">TypeScript</span>
+                                    <span class="project-tag">Vercel</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Zainulabdin Project -->
+                        <article class="project-card glass glow-border">
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="assets/portfolio-preview.webp"
+                                    alt="Zainulabdin Project preview"
+                                    class="project-img"
+                                    loading="lazy"
+                                />
+                                <span class="project-status glass">✓ Live</span>
+                                <div class="project-image-gradient"></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-info-header">
+                                    <h3 class="project-card-title">
+                                        Zainulabdin Project
+                                    </h3>
+                                    <div class="project-actions">
+                                        <a
+                                            href="https://zainulabdin-project.vercel.app"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            class="project-btn-icon project-btn-live"
+                                            title="Open Live Site"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path d="M7 17 17 7" />
+                                                <path d="M7 7h10v10" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="project-desc">
+                                    Modern personal project showcase and
+                                    portfolio with interactive UI and
+                                    animations.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="project-tag">HTML/CSS/JS</span>
+                                    <span class="project-tag">Web Dev</span>
+                                    <span class="project-tag">Vercel</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Private Projects Section -->
+                    <div class="projects-divider projects-header">
+                        <div>
+                            <span class="section-tag">// Private Projects</span>
+                            <h2 class="section-title">
+                                Behind the
+                                <span class="text-gradient">scenes</span>
+                            </h2>
+                        </div>
+                        <p class="projects-header-desc">
+                            Backend systems and academic projects where only the
+                            source code is accessible.
+                        </p>
+                    </div>
+
+                    <div class="projects-grid">
+                        <!-- Student Portal -->
+                        <article class="project-card glass glow-border">
+                            <div class="project-image-wrapper">
+                                <div class="project-placeholder grid-bg">
+                                    <span class="project-placeholder-text"
+                                        >Private Code</span
+                                    >
+                                </div>
+                                <span class="project-status glass"
+                                    >✓ Private Code</span
+                                >
+                                <div class="project-image-gradient"></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-info-header">
+                                    <h3 class="project-card-title">
+                                        Student Portal
+                                    </h3>
+                                    <div class="project-actions">
+                                        <a
+                                            href="https://github.com/zaini12121"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            class="project-btn-icon project-btn-code"
+                                            title="View Source Code"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path d="m18 16 4-4-4-4" />
+                                                <path d="m6 8-4 4 4 4" />
+                                                <path d="m14.5 4-5 16" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="project-desc">
+                                    Dual-role login (Admin & Student) with
+                                    separate dashboards, attendance system,
+                                    monthly fee tracker (paid/unpaid) and
+                                    application submissions. Powered by a cloud
+                                    PostgreSQL database on Neon.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Python</span>
+                                    <span class="project-tag">HTML/CSS/JS</span>
+                                    <span class="project-tag">SQL</span>
+                                    <span class="project-tag">Neon DB</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- QR Menu System -->
+                        <article class="project-card glass glow-border">
+                            <div class="project-image-wrapper">
+                                <div class="project-placeholder grid-bg">
+                                    <span class="project-placeholder-text"
+                                        >Private Code</span
+                                    >
+                                </div>
+                                <span class="project-status glass"
+                                    >✓ Private Code</span
+                                >
+                                <div class="project-image-gradient"></div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-info-header">
+                                    <h3 class="project-card-title">
+                                        QR Menu System
+                                    </h3>
+                                    <div class="project-actions">
+                                        <a
+                                            href="https://github.com/zaini12121"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            class="project-btn-icon project-btn-code"
+                                            title="View Source Code"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path d="m18 16 4-4-4-4" />
+                                                <path d="m6 8-4 4 4 4" />
+                                                <path d="m14.5 4-5 16" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="project-desc">
+                                    Customers scan a QR code to open a digital
+                                    restaurant menu, place online orders and
+                                    book tables — all backed by a SQL database.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Python</span>
+                                    <span class="project-tag">HTML/CSS/JS</span>
+                                    <span class="project-tag">SQL</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCE SECTION -->
+            <section id="experience">
+                <div class="container">
+                    <div style="max-width: 40rem">
+                        <span class="section-tag">// journey</span>
+                        <h2 class="section-title">
+                            Education &
+                            <span class="text-gradient">Experience</span>
+                        </h2>
+                    </div>
+
+                    <div class="timeline-wrapper">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-list">
+                            <!-- SMIT -->
+                            <div class="timeline-item">
+                                <div class="timeline-card-wrapper">
+                                    <div class="timeline-dot"></div>
+                                    <div
+                                        class="timeline-card glass glow-border"
+                                    >
+                                        <div class="timeline-meta">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path
+                                                    d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+                                                />
+                                                <path
+                                                    d="M6 18.8v-4L3.07 13.4a1 1 0 0 0-1.07 1.6l2.08 1a2 2 0 0 0 1.92 2.8z"
+                                                />
+                                                <path d="M21.5 12v6" />
+                                                <path d="M12 14v7" />
+                                            </svg>
+                                            <span class="timeline-period"
+                                                >2025 — Present</span
+                                            >
+                                        </div>
+                                        <h3 class="timeline-title">
+                                            AI & Data Science
+                                        </h3>
+                                        <div class="timeline-org">
+                                            SMIT — Saylani Mass IT Training,
+                                            Faisalabad
+                                        </div>
+                                        <p class="timeline-text">
+                                            Studying Python, machine learning,
+                                            data analysis and practical AI
+                                            applications.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cisco -->
+                            <div class="timeline-item">
+                                <div class="timeline-card-wrapper">
+                                    <div class="timeline-dot"></div>
+                                    <div
+                                        class="timeline-card glass glow-border"
+                                    >
+                                        <div class="timeline-meta">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path
+                                                    d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
+                                                />
+                                                <rect
+                                                    width="20"
+                                                    height="14"
+                                                    x="2"
+                                                    y="6"
+                                                    rx="2"
+                                                />
+                                            </svg>
+                                            <span class="timeline-period"
+                                                >2025</span
+                                            >
+                                        </div>
+                                        <h3 class="timeline-title">
+                                            Introduction to Modern AI
+                                        </h3>
+                                        <div class="timeline-org">
+                                            Cisco Networking Academy (Online)
+                                        </div>
+                                        <p class="timeline-text">
+                                            Certification course covering
+                                            fundamentals of modern AI and its
+                                            real-world use cases.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ICS -->
+                            <div class="timeline-item">
+                                <div class="timeline-card-wrapper">
+                                    <div class="timeline-dot"></div>
+                                    <div
+                                        class="timeline-card glass glow-border"
+                                    >
+                                        <div class="timeline-meta">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path
+                                                    d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+                                                />
+                                                <path
+                                                    d="M6 18.8v-4L3.07 13.4a1 1 0 0 0-1.07 1.6l2.08 1a2 2 0 0 0 1.92 2.8z"
+                                                />
+                                                <path d="M21.5 12v6" />
+                                                <path d="M12 14v7" />
+                                            </svg>
+                                            <span class="timeline-period"
+                                                >2024 — Present</span
+                                            >
+                                        </div>
+                                        <h3 class="timeline-title">
+                                            ICS — In Progress
+                                        </h3>
+                                        <div class="timeline-org">
+                                            M.C. Model Higher Secondary School ·
+                                            Faisalabad Board
+                                        </div>
+                                        <p class="timeline-text">
+                                            Intermediate in Computer Science,
+                                            building a strong foundation in CS
+                                            fundamentals.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Web Dev Self -->
+                            <div class="timeline-item">
+                                <div class="timeline-card-wrapper">
+                                    <div class="timeline-dot"></div>
+                                    <div
+                                        class="timeline-card glass glow-border"
+                                    >
+                                        <div class="timeline-meta">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path
+                                                    d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
+                                                />
+                                                <rect
+                                                    width="20"
+                                                    height="14"
+                                                    x="2"
+                                                    y="6"
+                                                    rx="2"
+                                                />
+                                            </svg>
+                                            <span class="timeline-period"
+                                                >2024 — Present</span
+                                            >
+                                        </div>
+                                        <h3 class="timeline-title">
+                                            Web Development (Self-Taught)
+                                        </h3>
+                                        <div class="timeline-org">
+                                            Online resources & personal projects
+                                        </div>
+                                        <p class="timeline-text">
+                                            Shipped a Student Portal, QR Menu
+                                            System and personal portfolio using
+                                            Python, JS and Neon DB.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Matric -->
+                            <div class="timeline-item">
+                                <div class="timeline-card-wrapper">
+                                    <div class="timeline-dot"></div>
+                                    <div
+                                        class="timeline-card glass glow-border"
+                                    >
+                                        <div class="timeline-meta">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path
+                                                    d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+                                                />
+                                                <path
+                                                    d="M6 18.8v-4L3.07 13.4a1 1 0 0 0-1.07 1.6l2.08 1a2 2 0 0 0 1.92 2.8z"
+                                                />
+                                                <path d="M21.5 12v6" />
+                                                <path d="M12 14v7" />
+                                            </svg>
+                                            <span class="timeline-period"
+                                                >Completed</span
+                                            >
+                                        </div>
+                                        <h3 class="timeline-title">
+                                            Matriculation (SSC)
+                                        </h3>
+                                        <div class="timeline-org">
+                                            Hassan Bin Sabit High School ·
+                                            Faisalabad Board
+                                        </div>
+                                        <p class="timeline-text">
+                                            Secondary School Certificate —
+                                            completed successfully.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contact">
+                <div class="container">
+                    <div class="contact-card glass glow-border">
+                        <div class="contact-glow-1"></div>
+                        <div class="contact-glow-2"></div>
+
+                        <div class="contact-grid">
+                            <!-- Text details -->
+                            <div>
+                                <span class="section-tag">// say hello</span>
+                                <h2 class="contact-info-title">
+                                    Let's build something
+                                    <span class="text-gradient"
+                                        >intelligent</span
+                                    >.
+                                </h2>
+                                <p class="contact-info-desc">
+                                    Have a project, internship opportunity, or
+                                    just want to chat about AI and web
+                                    development? My inbox is open.
+                                </p>
+
+                                <div class="social-links">
+                                    <!-- GitHub -->
+                                    <a
+                                        href="https://github.com/zaini12121"
+                                        aria-label="GitHub"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        class="social-btn glass"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                        >
+                                            <path
+                                                d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.35.78 1.05.78 2.12v3.14c0 .31.21.68.8.56A10.5 10.5 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <!-- LinkedIn -->
+                                    <a
+                                        href="https://www.linkedin.com/in/zain-ul-abdin-281985378"
+                                        aria-label="LinkedIn"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        class="social-btn glass"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                        >
+                                            <path
+                                                d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .78 0 1.74v20.52C0 23.22.79 24 1.77 24h20.45C23.2 24 24 23.22 24 22.26V1.74C24 .78 23.2 0 22.22 0z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <!-- Email -->
+                                    <a
+                                        href="mailto:zzawar521@gmail.com"
+                                        aria-label="Email"
+                                        class="social-btn glass"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="h-5 w-5"
+                                        >
+                                            <rect
+                                                width="20"
+                                                height="16"
+                                                x="2"
+                                                y="4"
+                                                rx="2"
+                                            />
+                                            <path
+                                                d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <!-- WhatsApp -->
+                                    <a
+                                        href="https://wa.me/923269656457"
+                                        aria-label="WhatsApp"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        class="social-btn glass"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                        >
+                                            <path
+                                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <!-- Facebook -->
+                                    <a
+                                        href="https://facebook.com"
+                                        aria-label="Facebook"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        class="social-btn glass"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                        >
+                                            <path
+                                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
+                                            />
+                                        </svg>
+                                    </a>
+                                    <!-- Instagram -->
+                                    <a
+                                        href="https://instagram.com/mz.dev2026"
+                                        aria-label="Instagram"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        class="social-btn glass"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <rect
+                                                x="2"
+                                                y="2"
+                                                width="20"
+                                                height="20"
+                                                rx="5"
+                                                ry="5"
+                                            />
+                                            <path
+                                                d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                                            />
+                                            <line
+                                                x1="17.5"
+                                                y1="6.5"
+                                                x2="17.5"
+                                                y2="6.5"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Form input fields -->
+                            <form id="contact-form" class="contact-form">
+                                <div class="form-row">
+                                    <input
+                                        type="text"
+                                        id="form-name"
+                                        required
+                                        placeholder="Your name"
+                                        class="form-input"
+                                        maxlength="100"
+                                    />
+                                    <input
+                                        type="email"
+                                        id="form-email"
+                                        required
+                                        placeholder="Email address"
+                                        class="form-input"
+                                        maxlength="255"
+                                    />
+                                </div>
+                                <textarea
+                                    id="form-message"
+                                    required
+                                    rows="5"
+                                    placeholder="Tell me about your project..."
+                                    class="form-textarea"
+                                    maxlength="1000"
+                                ></textarea>
+                                <div class="form-submit-container">
+                                    <button
+                                        type="submit"
+                                        id="submit-btn"
+                                        class="btn-submit"
+                                    >
+                                        Send message
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <line
+                                                x1="22"
+                                                x2="11"
+                                                y1="2"
+                                                y2="13"
+                                            />
+                                            <polygon
+                                                points="22 2 15 22 11 13 2 9 22 2"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- FOOTER -->
+                    <footer>
+                        <span
+                            >&copy; <span id="footer-year">2026</span> Muhammad
+                            Zain-ul-Abdin. All rights reserved.</span
+                        >
+                        <span class="font-mono"
+                            >Built with HTML · CSS · JS · ♥</span
+                        >
+                    </footer>
+                </div>
+            </section>
+
+            <!-- MOBILE BOTTOM NAVIGATION -->
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+                <ul class="mobile-nav-list glass">
+                    <li class="mobile-nav-item">
+                        <a href="#about">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
+                                />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#skills">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="m18 16 4-4-4-4" />
+                                <path d="m6 8-4 4 4 4" />
+                                <path d="m14.5 4-5 16" />
+                            </svg>
+                            <span>Skills</span>
+                        </a>
+                    </li>
+                    <li class="mobile-nav-item center-item">
+                        <a href="#home" aria-label="Home">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                                />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#projects">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
+                                />
+                                <circle cx="12" cy="13" r="3" />
+                                <path d="m12 10 3 3-3 3" />
+                            </svg>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#contact">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    width="20"
+                                    height="16"
+                                    x="2"
+                                    y="4"
+                                    rx="2"
+                                />
+                                <path
+                                    d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                                />
+                            </svg>
+                            <span>Contact</span>
+                        </a>
+                    </li>
                 </ul>
-              </div>
+            </nav>
+
+            <!-- CUSTOM TOAST NOTIFICATION CONTAINER -->
+            <div id="toast" class="custom-toast">
+                <span
+                    class="toast-icon toast-success-icon"
+                    style="display: none"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                </span>
+                <span class="toast-icon toast-error-icon" style="display: none">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" x2="12" y1="8" y2="12" />
+                        <line x1="12" x2="12.01" y1="16" y2="16" />
+                    </svg>
+                </span>
+                <span id="toast-message"></span>
             </div>
+        </main>
 
-            <!-- Frontend -->
-            <div class="skills-card glass glow-border">
-              <div class="skills-card-glow"></div>
-              <div class="skills-card-content">
-                <span class="skills-tag">ui / ux</span>
-                <h3 class="skills-title">Frontend</h3>
-                <ul class="skills-list">
-                  <li class="skills-item"><span class="skills-bullet"></span>HTML5</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>CSS3</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>java script</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>responsive design</li>
-                </ul>
-              </div>
-            </div>
+        <!-- Set Footer Year dynamically -->
+        <script>
+            document.getElementById("footer-year").textContent =
+                new Date().getFullYear();
+        </script>
 
-            <!-- Backend & DB -->
-            <div class="skills-card glass glow-border">
-              <div class="skills-card-glow"></div>
-              <div class="skills-card-content">
-                <span class="skills-tag">data layer</span>
-                <h3 class="skills-title">Backend & DB</h3>
-                <ul class="skills-list">
-                  <li class="skills-item"><span class="skills-bullet"></span>Python</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>Neon DB</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>mongodb</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>PostgreSQL</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>Vercel hosting</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Tools & AI -->
-            <div class="skills-card glass glow-border">
-              <div class="skills-card-glow"></div>
-              <div class="skills-card-content">
-                <span class="skills-tag">workflow</span>
-                <h3 class="skills-title">Tools & AI</h3>
-                <ul class="skills-list">
-                  <li class="skills-item"><span class="skills-bullet"></span>Git · GitHub</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>Cursor IDE</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>Antigravity IDE</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>github pages</li>
-                  <li class="skills-item"><span class="skills-bullet"></span>claude ai </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS SECTION -->
-      <section id="projects">
-        <div class="container">
-          <!-- Live Projects Section -->
-          <div class="projects-header">
-            <div>
-              <span class="section-tag">// Live Projects</span>
-              <h2 class="section-title">Projects that <span class="text-gradient">ship</span></h2>
-            </div>
-            <p class="projects-header-desc">Web applications and tools that are currently live and in production.</p>
-          </div>
-
-          <div class="projects-grid">
-            <!-- Paper GenAI -->
-            <article class="project-card glass glow-border">
-              <div class="project-image-wrapper">
-                <img src="assets/paper-genai.png" alt="Paper GenAI preview" class="project-img" loading="lazy" />
-                <span class="project-status glass">✓ Live</span>
-                <div class="project-image-gradient"></div>
-              </div>
-              <div class="project-info">
-                <div class="project-info-header">
-                  <h3 class="project-card-title">Paper GenAI</h3>
-                  <div class="project-actions">
-                    <a href="https://paper-genai.lovable.app" target="_blank" rel="noreferrer" class="project-btn-icon project-btn-live" title="Open Live Site">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-                    </a>
-                  </div>
-                </div>
-                <p class="project-desc">An AI-powered tool designed to streamline document and paper generation using advanced language models.</p>
-                <div class="project-tags">
-                  <span class="project-tag">React</span>
-                  <span class="project-tag">AI</span>
-                  <span class="project-tag">Web App</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Speed Lab -->
-            <article class="project-card glass glow-border">
-              <div class="project-image-wrapper">
-                <img src="assets/speed lab.png" alt="Speed Lab preview" class="project-img" loading="lazy" />
-                <span class="project-status glass">✓ Live</span>
-                <div class="project-image-gradient"></div>
-              </div>
-              <div class="project-info">
-                <div class="project-info-header">
-                  <h3 class="project-card-title">Speed Lab</h3>
-                  <div class="project-actions">
-                    <a href="https://speed-lab.vercel.app" target="_blank" rel="noreferrer" class="project-btn-icon project-btn-live" title="Open Live Site">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-                    </a>
-                  </div>
-                </div>
-                <p class="project-desc">A feature-rich typing speed testing and network diagnostic tool built for performance tracking.</p>
-                <div class="project-tags">
-                  <span class="project-tag">React</span>
-                  <span class="project-tag">TypeScript</span>
-                  <span class="project-tag">Vercel</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Zainulabdin Project -->
-            <article class="project-card glass glow-border">
-              <div class="project-image-wrapper">
-                <img src="assets/portfolio-preview.webp" alt="Zainulabdin Project preview" class="project-img" loading="lazy" />
-                <span class="project-status glass">✓ Live</span>
-                <div class="project-image-gradient"></div>
-              </div>
-              <div class="project-info">
-                <div class="project-info-header">
-                  <h3 class="project-card-title">Zainulabdin Project</h3>
-                  <div class="project-actions">
-                    <a href="https://zainulabdin-project.vercel.app" target="_blank" rel="noreferrer" class="project-btn-icon project-btn-live" title="Open Live Site">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-                    </a>
-                  </div>
-                </div>
-                <p class="project-desc">Modern personal project showcase and portfolio with interactive UI and animations.</p>
-                <div class="project-tags">
-                  <span class="project-tag">HTML/CSS/JS</span>
-                  <span class="project-tag">Web Dev</span>
-                  <span class="project-tag">Vercel</span>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- Private Projects Section -->
-          <div class="projects-divider projects-header">
-            <div>
-              <span class="section-tag">// Private Projects</span>
-              <h2 class="section-title">Behind the <span class="text-gradient">scenes</span></h2>
-            </div>
-            <p class="projects-header-desc">Backend systems and academic projects where only the source code is accessible.</p>
-          </div>
-
-          <div class="projects-grid">
-            <!-- Student Portal -->
-            <article class="project-card glass glow-border">
-              <div class="project-image-wrapper">
-                <div class="project-placeholder grid-bg">
-                  <span class="project-placeholder-text">Private Code</span>
-                </div>
-                <span class="project-status glass">✓ Private Code</span>
-                <div class="project-image-gradient"></div>
-              </div>
-              <div class="project-info">
-                <div class="project-info-header">
-                  <h3 class="project-card-title">Student Portal</h3>
-                  <div class="project-actions">
-                    <a href="https://github.com/zaini12121" target="_blank" rel="noreferrer" class="project-btn-icon project-btn-code" title="View Source Code">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-                    </a>
-                  </div>
-                </div>
-                <p class="project-desc">Dual-role login (Admin & Student) with separate dashboards, attendance system, monthly fee tracker (paid/unpaid) and application submissions. Powered by a cloud PostgreSQL database on Neon.</p>
-                <div class="project-tags">
-                  <span class="project-tag">Python</span>
-                  <span class="project-tag">HTML/CSS/JS</span>
-                  <span class="project-tag">SQL</span>
-                  <span class="project-tag">Neon DB</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- QR Menu System -->
-            <article class="project-card glass glow-border">
-              <div class="project-image-wrapper">
-                <div class="project-placeholder grid-bg">
-                  <span class="project-placeholder-text">Private Code</span>
-                </div>
-                <span class="project-status glass">✓ Private Code</span>
-                <div class="project-image-gradient"></div>
-              </div>
-              <div class="project-info">
-                <div class="project-info-header">
-                  <h3 class="project-card-title">QR Menu System</h3>
-                  <div class="project-actions">
-                    <a href="https://github.com/zaini12121" target="_blank" rel="noreferrer" class="project-btn-icon project-btn-code" title="View Source Code">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-                    </a>
-                  </div>
-                </div>
-                <p class="project-desc">Customers scan a QR code to open a digital restaurant menu, place online orders and book tables — all backed by a SQL database.</p>
-                <div class="project-tags">
-                  <span class="project-tag">Python</span>
-                  <span class="project-tag">HTML/CSS/JS</span>
-                  <span class="project-tag">SQL</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- EXPERIENCE SECTION -->
-      <section id="experience">
-        <div class="container">
-          <div style="max-width: 40rem;">
-            <span class="section-tag">// journey</span>
-            <h2 class="section-title">Education & <span class="text-gradient">Experience</span></h2>
-          </div>
-
-          <div class="timeline-wrapper">
-            <div class="timeline-line"></div>
-            <div class="timeline-list">
-              <!-- SMIT -->
-              <div class="timeline-item">
-                <div class="timeline-card-wrapper">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-card glass glow-border">
-                    <div class="timeline-meta">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 18.8v-4L3.07 13.4a1 1 0 0 0-1.07 1.6l2.08 1a2 2 0 0 0 1.92 2.8z"/><path d="M21.5 12v6"/><path d="M12 14v7"/></svg>
-                      <span class="timeline-period">2025 — Present</span>
-                    </div>
-                    <h3 class="timeline-title">AI & Data Science</h3>
-                    <div class="timeline-org">SMIT — Saylani Mass IT Training, Faisalabad</div>
-                    <p class="timeline-text">Studying Python, machine learning, data analysis and practical AI applications.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Cisco -->
-              <div class="timeline-item">
-                <div class="timeline-card-wrapper">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-card glass glow-border">
-                    <div class="timeline-meta">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
-                      <span class="timeline-period">2025</span>
-                    </div>
-                    <h3 class="timeline-title">Introduction to Modern AI</h3>
-                    <div class="timeline-org">Cisco Networking Academy (Online)</div>
-                    <p class="timeline-text">Certification course covering fundamentals of modern AI and its real-world use cases.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- ICS -->
-              <div class="timeline-item">
-                <div class="timeline-card-wrapper">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-card glass glow-border">
-                    <div class="timeline-meta">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 18.8v-4L3.07 13.4a1 1 0 0 0-1.07 1.6l2.08 1a2 2 0 0 0 1.92 2.8z"/><path d="M21.5 12v6"/><path d="M12 14v7"/></svg>
-                      <span class="timeline-period">2024 — Present</span>
-                    </div>
-                    <h3 class="timeline-title">ICS — In Progress</h3>
-                    <div class="timeline-org">M.C. Model Higher Secondary School · Faisalabad Board</div>
-                    <p class="timeline-text">Intermediate in Computer Science, building a strong foundation in CS fundamentals.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Web Dev Self -->
-              <div class="timeline-item">
-                <div class="timeline-card-wrapper">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-card glass glow-border">
-                    <div class="timeline-meta">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
-                      <span class="timeline-period">2024 — Present</span>
-                    </div>
-                    <h3 class="timeline-title">Web Development (Self-Taught)</h3>
-                    <div class="timeline-org">Online resources & personal projects</div>
-                    <p class="timeline-text">Shipped a Student Portal, QR Menu System and personal portfolio using Python, JS and Neon DB.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Matric -->
-              <div class="timeline-item">
-                <div class="timeline-card-wrapper">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-card glass glow-border">
-                    <div class="timeline-meta">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 18.8v-4L3.07 13.4a1 1 0 0 0-1.07 1.6l2.08 1a2 2 0 0 0 1.92 2.8z"/><path d="M21.5 12v6"/><path d="M12 14v7"/></svg>
-                      <span class="timeline-period">Completed</span>
-                    </div>
-                    <h3 class="timeline-title">Matriculation (SSC)</h3>
-                    <div class="timeline-org">Hassan Bin Sabit High School · Faisalabad Board</div>
-                    <p class="timeline-text">Secondary School Certificate — completed successfully.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT SECTION -->
-      <section id="contact">
-        <div class="container">
-          <div class="contact-card glass glow-border">
-            <div class="contact-glow-1"></div>
-            <div class="contact-glow-2"></div>
-
-            <div class="contact-grid">
-              <!-- Text details -->
-              <div>
-                <span class="section-tag">// say hello</span>
-                <h2 class="contact-info-title">Let's build something <span class="text-gradient">intelligent</span>.</h2>
-                <p class="contact-info-desc">
-                  Have a project, internship opportunity, or just want to chat about AI and web development? My inbox is open.
-                </p>
-
-                <div class="social-links">
-                  <!-- GitHub -->
-                  <a href="https://github.com/zaini12121" aria-label="GitHub" target="_blank" rel="noreferrer" class="social-btn glass">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.57.23 2.73.11 3.02.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.35.78 1.05.78 2.12v3.14c0 .31.21.68.8.56A10.5 10.5 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
-                  </a>
-                  <!-- LinkedIn -->
-                  <a href="https://www.linkedin.com/in/zain-ul-abdin-281985378" aria-label="LinkedIn" target="_blank" rel="noreferrer" class="social-btn glass">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .78 0 1.74v20.52C0 23.22.79 24 1.77 24h20.45C23.2 24 24 23.22 24 22.26V1.74C24 .78 23.2 0 22.22 0z"/></svg>
-                  </a>
-                  <!-- Email -->
-                  <a href="mailto:zzawar521@gmail.com" aria-label="Email" class="social-btn glass">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                  </a>
-                  <!-- WhatsApp -->
-                  <a href="https://wa.me/923269656457" aria-label="WhatsApp" target="_blank" rel="noreferrer" class="social-btn glass">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-                  </a>
-                  <!-- Facebook -->
-                  <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noreferrer" class="social-btn glass">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
-                  </a>
-                  <!-- Instagram -->
-                  <a href="https://instagram.com/mz.dev2026" aria-label="Instagram" target="_blank" rel="noreferrer" class="social-btn glass">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Form input fields -->
-              <form id="contact-form" class="contact-form">
-                <div class="form-row">
-                  <input type="text" id="form-name" required placeholder="Your name" class="form-input" maxlength="100" />
-                  <input type="email" id="form-email" required placeholder="Email address" class="form-input" maxlength="255" />
-                </div>
-                <textarea id="form-message" required rows="5" placeholder="Tell me about your project..." class="form-textarea" maxlength="1000"></textarea>
-                <div class="form-submit-container">
-                  <button type="submit" id="submit-btn" class="btn-submit">
-                    Send message
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <!-- FOOTER -->
-          <footer>
-            <span>&copy; <span id="footer-year">2026</span> Muhammad Zain-ul-Abdin. All rights reserved.</span>
-            <span class="font-mono">Built with HTML · CSS · JS · ♥</span>
-          </footer>
-        </div>
-      </section>
-
-      <!-- MOBILE BOTTOM NAVIGATION -->
-      <nav class="mobile-nav" aria-label="Mobile navigation">
-        <ul class="mobile-nav-list glass">
-          <li class="mobile-nav-item">
-            <a href="#about">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              <span>About</span>
-            </a>
-          </li>
-          <li class="mobile-nav-item">
-            <a href="#skills">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-              <span>Skills</span>
-            </a>
-          </li>
-          <li class="mobile-nav-item center-item">
-            <a href="#home" aria-label="Home">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </a>
-          </li>
-          <li class="mobile-nav-item">
-            <a href="#projects">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/><circle cx="12" cy="13" r="3"/><path d="m12 10 3 3-3 3"/></svg>
-              <span>Projects</span>
-            </a>
-          </li>
-          <li class="mobile-nav-item">
-            <a href="#contact">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              <span>Contact</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- CUSTOM TOAST NOTIFICATION CONTAINER -->
-      <div id="toast" class="custom-toast">
-        <span class="toast-icon toast-success-icon" style="display: none;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </span>
-        <span class="toast-icon toast-error-icon" style="display: none;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
-        </span>
-        <span id="toast-message"></span>
-      </div>
-    </main>
-
-    <!-- Set Footer Year dynamically -->
-    <script>
-      document.getElementById("footer-year").textContent = new Date().getFullYear();
-    </script>
-    
-    <!-- Script Logic -->
-    <script src="js/script.js"></script>
-  </body>
+        <!-- Script Logic -->
+        <script src="js/script.js"></script>
+    </body>
 </html>
