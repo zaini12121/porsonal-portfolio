@@ -1146,6 +1146,128 @@ footer {
 }
 
 /* ============================================================
+   BOTTOM-LEFT SOCIAL FLOATING BUTTONS
+   ============================================================ */
+.floating-social {
+  position: fixed;
+  z-index: 45;
+  right: 1.25rem;
+  bottom: 5.25rem; /* space above mobile nav */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.3s var(--transition-smooth);
+}
+
+
+
+.floating-social-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.1rem;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  justify-content: center;
+  background: hsl(230 30% 10% / 0.55);
+  border: 1px solid hsl(80 90% 70% / 0.15);
+
+  box-shadow: 0 0 0 0px hsl(80 90% 70% / 0);
+
+  transform: translateY(10px);
+  animation: floatingSocialIn 0.8s var(--transition-spring) forwards;
+  will-change: transform, opacity;
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-social-btn::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.25), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.floating-social-btn:hover::after { opacity: 1; }
+
+.floating-social-btn svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  transition: transform 0.3s var(--transition-spring);
+  color: hsl(var(--primary));
+}
+
+.floating-social-btn:hover {
+  opacity: 1;
+  transform: translateY(-6px) scale(1.07);
+
+  box-shadow: 0 16px 40px hsl(80 90% 70% / 0.15), 0 0 22px hsl(80 90% 70% / 0.25);
+}
+
+.floating-social-btn:hover svg { transform: rotate(6deg) scale(1.06); }
+
+/* per-network accents */
+.social-btn-github:hover {
+  box-shadow: 0 16px 40px rgba(255,255,255,0.06), 0 0 26px rgba(80, 220, 255, 0.25);
+}
+.social-btn-linkedin:hover {
+  box-shadow: 0 16px 40px rgba(255,255,255,0.06), 0 0 26px rgba(0, 120, 255, 0.25);
+}
+.social-btn-whatsapp:hover {
+  box-shadow: 0 16px 40px rgba(255,255,255,0.06), 0 0 26px rgba(0, 255, 170, 0.25);
+}
+
+.social-btn-github svg    { color: #ffffff; }
+.social-btn-linkedin svg  { color: #7bb7ff; }
+.social-btn-whatsapp svg  { color: #47ffb3; }
+
+.floating-social-btn {
+  animation-name: floatingSocialIn;
+}
+
+.floating-social-btn:nth-child(1) { animation-delay: 0.1s; }
+.floating-social-btn:nth-child(2) { animation-delay: 0.2s; }
+.floating-social-btn:nth-child(3) { animation-delay: 0.3s; }
+
+.floating-social {
+  animation: floatingSocialFloat 3.2s ease-in-out infinite;
+}
+
+@keyframes floatingSocialIn {
+  0%   { opacity: 0; transform: translateY(18px) scale(0.92); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes floatingSocialFloat {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-10px); }
+}
+
+@media (min-width: 768px) {
+  .floating-social {
+    bottom: 2.5rem;
+  }
+}
+
+/* Reduce opacity after hero section */
+@media (max-width: 99999px) {
+  main:has(#home:in-view) .floating-social {
+    opacity: 1;
+  }
+  main:has(#home:not(:in-view)) .floating-social {
+    opacity: 0.5;
+  }
+  main:has(#home:not(:in-view)) .floating-social-btn:hover {
+    opacity: 1;
+  }
+}
+
+
+/* ============================================================
    MOBILE BOTTOM NAV
    ============================================================ */
 .mobile-nav {
