@@ -152,6 +152,7 @@ a { color: inherit; text-decoration: none; transition: var(--transition-smooth);
   padding: 1px;
   background: var(--gradient-primary);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0.3;
