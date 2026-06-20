@@ -1253,17 +1253,10 @@ footer {
   }
 }
 
-/* Reduce opacity after hero section */
-@media (max-width: 99999px) {
-  main:has(#home:in-view) .floating-social {
-    opacity: 1;
-  }
-  main:has(#home:not(:in-view)) .floating-social {
-    opacity: 0.5;
-  }
-  main:has(#home:not(:in-view)) .floating-social-btn:hover {
-    opacity: 1;
-  }
+/* Hide floating social after hero section */
+.floating-social.hidden-social {
+  opacity: 0;
+  pointer-events: none;
 }
 
 

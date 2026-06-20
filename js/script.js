@@ -386,4 +386,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // ============================================================
+  // FLOATING SOCIAL VISIBILITY
+  // ============================================================
+  const floatingSocial = document.querySelector(".floating-social");
+  const homeSection = document.getElementById("home");
+  if (floatingSocial && homeSection) {
+    const socialObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          floatingSocial.classList.remove("hidden-social");
+        } else {
+          floatingSocial.classList.add("hidden-social");
+        }
+      });
+    }, { threshold: 0.1 });
+    socialObserver.observe(homeSection);
+  }
+
 });
