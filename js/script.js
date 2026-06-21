@@ -356,12 +356,31 @@ document.addEventListener("DOMContentLoaded", () => {
         document.head.appendChild(style);
       }
 
-      setTimeout(() => {
+      const formData = new FormData();
+      formData.append("access_key", "66800f8e-e641-4519-8c1b-170e662560d6"); 
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("message", message);
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      })
+      .then(async (response) => {
+        if (response.status == 200) {
+          showToast("Message sent successfully!", "success");
+          contactForm.reset();
+        } else {
+          showToast("Something went wrong!", "error");
+        }
+      })
+      .catch(error => {
+        showToast("Something went wrong!", "error");
+      })
+      .finally(() => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
-        contactForm.reset();
-        showToast("Message sent successfully!", "success");
-      }, 1500);
+      });
     });
   }
 
