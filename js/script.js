@@ -50,19 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     el.addEventListener("mouseleave", () => cursorRing.classList.remove("hover"));
   });
 
-  // ============================================================
-  // BACK TO TOP BUTTON
-  // ============================================================
-  const backBtn = document.createElement("button");
-  backBtn.className = "back-to-top";
-  backBtn.setAttribute("aria-label", "Back to top");
-  backBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>`;
-  document.body.appendChild(backBtn);
 
-  window.addEventListener("scroll", () => {
-    backBtn.classList.toggle("visible", window.scrollY > 400);
-  });
-  backBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
   // ============================================================
   // SPLASH SCREEN
@@ -195,10 +183,36 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
   // ============================================================
+  // MOBILE MENU TOGGLE
+  // ============================================================
+  const hamburgerBtn = document.querySelector(".hamburger-btn");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const mobileMenuClose = document.querySelector(".mobile-menu-close");
+  const mobileMenuLinks = document.querySelectorAll(".mobile-menu-links a");
+
+  if (hamburgerBtn && mobileMenu) {
+    hamburgerBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
+    
+    if (mobileMenuClose) {
+      mobileMenuClose.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
+    }
+
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
+    });
+  }
+
+  // ============================================================
   // ACTIVE NAV LINKS (IntersectionObserver)
   // ============================================================
   const sections  = document.querySelectorAll("section[id]");
-  const navLinks  = document.querySelectorAll(".nav-links a, .mobile-nav a");
+  const navLinks  = document.querySelectorAll(".nav-links a, .mobile-menu-links a");
 
   const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -421,6 +435,50 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }, { threshold: 0.1 });
     socialObserver.observe(homeSection);
+  }
+
+  // ============================================================
+  // POLICY MODALS
+  // ============================================================
+  const policies = {
+    privacy: {
+      title: "Privacy Policy",
+      content: "Your privacy is important to us. This portfolio collects minimal data necessary for communication purposes only. No third-party tracking or advertising cookies are used. Any information submitted via the contact form is kept strictly confidential."
+    },
+    terms: {
+      title: "Terms of Service",
+      content: "By using this website, you agree to interact respectfully. The content provided here is for informational and portfolio demonstration purposes. The projects showcased are intellectual property and may not be copied without permission."
+    },
+    cookie: {
+      title: "Cookie Policy",
+      content: "This website uses essential cookies only to ensure you get the best experience, such as remembering your preferences. We do not use advertising or tracking cookies. By continuing to use the site, you agree to this."
+    }
+  };
+
+  const policyLinks = document.querySelectorAll(".policy-link");
+  const policyModal = document.getElementById("policy-modal");
+  
+  if (policyModal) {
+    const policyModalTitle = document.getElementById("policy-modal-title");
+    const policyModalContent = document.getElementById("policy-modal-content");
+    const policyModalClose = document.querySelector(".policy-modal-close");
+    const policyModalBackdrop = document.querySelector(".policy-modal-backdrop");
+
+    policyLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const type = link.getAttribute("data-policy");
+        if (policies[type]) {
+          policyModalTitle.textContent = policies[type].title;
+          policyModalContent.textContent = policies[type].content;
+          policyModal.classList.add("active");
+        }
+      });
+    });
+
+    const closeModal = () => policyModal.classList.remove("active");
+    if (policyModalClose) policyModalClose.addEventListener("click", closeModal);
+    if (policyModalBackdrop) policyModalBackdrop.addEventListener("click", closeModal);
   }
 
 });
