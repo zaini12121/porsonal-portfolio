@@ -1483,3 +1483,127 @@ footer {
   color: hsl(var(--muted-foreground));
   line-height: 1.6;
 }
+
+/* ============================================================
+   PROJECTS SHOWCASE CAROUSEL (3D Tilt)
+   ============================================================ */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+
+.carousel-track {
+  perspective: 1200px;
+  width: 100%;
+  max-width: 900px;
+  height: 550px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tilt-card-wrapper {
+  position: absolute;
+  width: 340px;
+  height: 480px;
+  transform-style: preserve-3d;
+  will-change: transform, filter, opacity;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s ease, opacity 0.6s ease;
+  cursor: pointer;
+}
+
+.project-carousel-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  inset: 0;
+}
+
+.project-carousel-card .project-image-wrapper {
+  height: 45%;
+  flex-shrink: 0;
+}
+
+.project-carousel-card .card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: linear-gradient(to bottom, transparent, hsl(150 20% 8%));
+}
+
+.project-carousel-card .card-actions {
+  margin-top: auto;
+}
+
+.btn-live {
+  background: var(--gradient-primary);
+  color: hsl(150 30% 5%);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s;
+  box-shadow: var(--shadow-glow);
+}
+.btn-live:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px hsl(80 90% 70% / 0.6);
+}
+
+.btn-git {
+  background: transparent;
+  color: hsl(var(--foreground));
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  border: 1px solid hsl(80 90% 70% / 0.3);
+  transition: all 0.3s;
+}
+.btn-git:hover {
+  background: hsl(80 90% 70% / 0.1);
+  border-color: hsl(80 90% 70%);
+  transform: translateY(-2px);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+.carousel-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: hsl(150 20% 25%);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.carousel-dot.active {
+  background: hsl(var(--primary));
+  box-shadow: 0 0 10px hsl(var(--primary));
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    gap: 1rem;
+    overflow: hidden;
+  }
+  .carousel-track { max-width: 100vw; height: 500px; }
+  .tilt-card-wrapper {
+    width: 280px;
+    height: 420px;
+  }
+}

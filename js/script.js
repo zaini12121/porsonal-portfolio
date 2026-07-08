@@ -481,4 +481,193 @@ document.addEventListener("DOMContentLoaded", () => {
     if (policyModalBackdrop) policyModalBackdrop.addEventListener("click", closeModal);
   }
 
+  // ============================================================
+  // 3D SHOWCASE CAROUSEL
+  // ============================================================
+  const projectsData = [
+    {
+      title: "Paper GenAI",
+      description: "An AI-powered tool designed to streamline document and paper generation using advanced language models.",
+      image: "assets/paper-genai.png",
+      liveLink: "https://paper-genai.vercel.app",
+      githubLink: "#",
+      status: "Live"
+    },
+    {
+      title: "Speed Lab",
+      description: "A feature-rich typing speed testing and network diagnostic tool built for performance tracking.",
+      image: "assets/speed lab.png",
+      liveLink: "https://speed-lab.vercel.app",
+      githubLink: "#",
+      status: "Live"
+    },
+    {
+      title: "Zainulabdin Project",
+      description: "Modern personal project showcase and portfolio with interactive UI and animations.",
+      image: "assets/portfolio-preview.webp",
+      liveLink: "https://zainulabdin-project.vercel.app",
+      githubLink: "#",
+      status: "Live"
+    },
+    {
+      title: "Student Portal",
+      description: "Dual-role login (Admin & Student) with separate dashboards, attendance system, monthly fee tracker (paid/unpaid).",
+      image: "assets/portfolio-preview.webp",
+      liveLink: "#",
+      githubLink: "https://github.com/zaini12121",
+      status: "Private Code"
+    },
+    {
+      title: "QR Menu System",
+      description: "Customers scan a QR code to open a digital restaurant menu, place online orders and book tables.",
+      image: "assets/portfolio-preview.webp",
+      liveLink: "#",
+      githubLink: "https://github.com/zaini12121",
+      status: "Private Code"
+    }
+  ];
+
+  const track = document.getElementById('card-track');
+  const dotsContainer = document.getElementById('carousel-dots');
+
+  if (track) {
+    let currentIndex = 0;
+
+    function initCarousel() {
+      track.innerHTML = '';
+      projectsData.forEach((project, i) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'tilt-card-wrapper';
+        wrapper.dataset.index = i;
+        
+        wrapper.addEventListener('click', () => {
+          if (currentIndex !== i) {
+             changeSlide(i);
+          }
+        });
+
+        wrapper.addEventListener('mousemove', (e) => {
+          if (currentIndex !== i) return;
+          wrapper.style.transition = 'none';
+          const rect = wrapper.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          const mouseX = e.clientX - centerX;
+          const mouseY = e.clientY - centerY;
+          const rotateX = (mouseY / (rect.height / 2)) * -15;
+          const rotateY = (mouseX / (rect.width / 2)) * 15;
+          wrapper.style.transform = `translateX(0) scale(1) translateZ(50px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        wrapper.addEventListener('mouseleave', () => {
+          if (currentIndex !== i) return;
+          wrapper.style.transition = 'transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s ease, opacity 0.6s ease';
+          wrapper.style.transform = `translateX(0) scale(1) translateZ(50px) rotateX(0deg) rotateY(0deg)`;
+        });
+
+        const liveBtnHtml = project.liveLink !== "#" ? `<a href="${project.liveLink}" target="_blank" class="btn-live" onclick="event.stopPropagation()">Live Demo</a>` : '';
+        const gitBtnHtml = project.githubLink !== "#" ? `<a href="${project.githubLink}" target="_blank" class="btn-git" onclick="event.stopPropagation()">Git Code</a>` : '';
+        
+        wrapper.innerHTML = `
+          <article class="project-card glass glow-border project-carousel-card">
+            <div class="project-image-wrapper">
+              <img src="${project.image}" alt="${project.title}" class="project-img" style="width: 100%; height: 100%; object-fit: cover; border-top-left-radius: inherit; border-top-right-radius: inherit;">
+              <span class="project-status glass" style="position: absolute; top: 1rem; right: 1rem; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem;">✓ ${project.status}</span>
+              <div class="project-image-gradient" style="position: absolute; inset: 0; background: linear-gradient(to top, hsl(150 20% 8%), transparent);"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title text-gradient" style="margin-bottom: 0.5rem; font-size: 1.5rem; font-weight: 700;">${project.title}</h3>
+              <p class="card-desc text-muted" style="font-size: 0.9rem; line-height: 1.5;">${project.description}</p>
+              <div class="card-actions" style="display: flex; justify-content: space-between; gap: 1rem; margin-top: 1rem;">
+                ${liveBtnHtml}
+                ${gitBtnHtml}
+              </div>
+            </div>
+          </article>
+        `;
+        track.appendChild(wrapper);
+      });
+      createDots();
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const cards = track.querySelectorAll('.tilt-card-wrapper');
+      cards.forEach((card, i) => {
+        const offset = i - currentIndex;
+        
+        if (offset === 0) {
+          card.style.transform = `translateX(0) scale(1) translateZ(50px) rotateX(0deg) rotateY(0deg)`;
+          card.style.filter = `blur(0px)`;
+          card.style.opacity = `1`;
+          card.style.zIndex = `10`;
+          card.style.pointerEvents = 'auto';
+        } else {
+          const direction = offset > 0 ? 1 : -1;
+          const absOffset = Math.abs(offset);
+          
+          const isMobile = window.innerWidth <= 768;
+          const baseOffset = isMobile ? 120 : 180;
+          const multiOffset = isMobile ? 40 : 60;
+          
+          const translateX = direction * (baseOffset + absOffset * multiOffset); 
+          const scale = Math.max(0.6, 1 - absOffset * 0.15);
+          const zIndex = 10 - absOffset;
+          const blur = absOffset * 4;
+          const opacity = Math.max(0, 1 - absOffset * 0.4);
+          const rotateY = direction * -20;
+
+          card.style.transform = `translateX(${translateX}px) scale(${scale}) translateZ(${-absOffset * 80}px) rotateY(${rotateY}deg)`;
+          card.style.filter = `blur(${blur}px)`;
+          card.style.opacity = `${opacity}`;
+          card.style.zIndex = `${zIndex}`;
+          card.style.pointerEvents = 'auto';
+        }
+      });
+      
+      if (dotsContainer) {
+        dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
+      }
+    }
+
+    function createDots() {
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = '';
+      projectsData.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('carousel-dot');
+        dot.addEventListener('click', () => changeSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    function changeSlide(newIndex) {
+      if (newIndex < 0 || newIndex >= projectsData.length) return;
+      currentIndex = newIndex;
+      updateCarousel();
+    }
+    
+    // Allow touch swiping
+    let startX = 0;
+    let endX = 0;
+    track.addEventListener('touchstart', e => {
+      startX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    track.addEventListener('touchend', e => {
+      endX = e.changedTouches[0].screenX;
+      if (startX - endX > 50 && currentIndex < projectsData.length - 1) {
+        changeSlide(currentIndex + 1);
+      } else if (endX - startX > 50 && currentIndex > 0) {
+        changeSlide(currentIndex - 1);
+      }
+    }, {passive: true});
+
+    // Allow window resize to update layout
+    window.addEventListener('resize', updateCarousel);
+
+    initCarousel();
+  }
+
 });
